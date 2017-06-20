@@ -9,7 +9,7 @@
     <meta name="description" content="지나간 것은 지나간대로 그런 의미가 있죠">
 <meta property="og:type" content="website">
 <meta property="og:title" content="sVeloper&#39;s">
-<meta property="og:url" content="http://khackskjs.github.io/blogtest/tags/Hexo/index.html">
+<meta property="og:url" content="http://khackskjs.github.io/tags/Hexo/index.html">
 <meta property="og:site_name" content="sVeloper&#39;s">
 <meta property="og:description" content="지나간 것은 지나간대로 그런 의미가 있죠">
 <meta name="twitter:card" content="summary">
@@ -23,19 +23,19 @@
 
     
 
-    <link rel="stylesheet" href="/blogtest/libs/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/blogtest/libs/titillium-web/styles.css">
-    <link rel="stylesheet" href="/blogtest/libs/source-code-pro/styles.css">
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
 
-    <link rel="stylesheet" href="/blogtest/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 
-    <script src="/blogtest/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
     
     
-        <link rel="stylesheet" href="/blogtest/libs/lightgallery/css/lightgallery.min.css">
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
     
     
-        <link rel="stylesheet" href="/blogtest/libs/justified-gallery/justifiedGallery.min.css">
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
     
     
     
@@ -50,7 +50,7 @@
             <div class="container-inner">
                 <div id="header-title">
                     <h1 class="logo-wrap">
-                        <a href="/blogtest/" class="logo"></a>
+                        <a href="/" class="logo"></a>
                     </h1>
                     
                         <h2 class="subtitle-wrap">
@@ -64,13 +64,13 @@
                         <ul id="main-nav">
                             
                                 <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="/blogtest/">Inici</a>
+                                    <a class="main-nav-list-link" href="/">Inici</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blogtest/categories/Blog/">Blog</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blogtest/categories/Blog/Hexo/">Hexo</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Blog/">Blog</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Blog/Hexo/">Hexo</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="/blogtest/about/index.html">Quant a</a>
+                                    <a class="main-nav-list-link" href="/about/index.html">Quant a</a>
                                 </li>
                             
                         </ul>
@@ -103,13 +103,13 @@
             TAGS: 'etiquetes',
             UNTITLED: '(Untitled)',
         },
-        ROOT_URL: '/blogtest/',
-        CONTENT_URL: '/blogtest/content.json',
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
     };
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
 })(window);
 </script>
-<script src="/blogtest/js/insight.js"></script>
+<script src="/js/insight.js"></script>
 
 </div>
                         </nav>
@@ -138,7 +138,7 @@
         
         <section class="archives-wrap">
             <div class="archive-year-wrap">
-                <a href="/blogtest/archives/2017" class="archive-year"><i class="icon fa fa-calendar-o"></i>2017</a>
+                <a href="/archives/2017" class="archive-year"><i class="icon fa fa-calendar-o"></i>2017</a>
             </div>
             <div class="archives">
     
@@ -151,23 +151,49 @@
         
         <div class="article-meta">
             <div class="category">
-            <a class="article-category-link" href="/blogtest/categories/Blog/">Blog</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blogtest/categories/Blog/Hexo/">Hexo</a>
+            <a class="article-category-link" href="/categories/Blog/">Blog</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Blog/Hexo/">Hexo</a>
+            </div>
+            <div class="date"><time datetime="2017-06-20T13:07:49.000Z" itemprop="datePublished">2017-06-20</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/06/20/Hexo-github-pages로-블로그-환경-설정/">Hexo, github pages로 블로그 환경 설정</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            목차
+Hexo, github pages로 블로그 환경 설정hexo를 이용해서 정적사이트를 생성하고, github pages로 호스팅해서 블로그를 운영 할 수 있다.Comment는 정적 사이트가 아니므로 Disqus라는 서비스를 붙여서 해결 할 수 있다.(comment 붙이는데 오래 걸렸네! 쉬움에도 불구하고..확신이 없다보니..)
+크게 3단계로 해결한다.
+
+        </p>
+    </div>
+</article>
+    
+
+    
+    
+    
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/Blog/">Blog</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Blog/Hexo/">Hexo</a>
             </div>
             <div class="date"><time datetime="2017-05-27T14:18:59.000Z" itemprop="datePublished">2017-05-27</time></div>
         </div>
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/blogtest/2017/05/27/First-Post-Test/">Hexo, github 환경 설정</a>
+        <a href="/2017/05/27/First-Post-Test/">Hexo, github pages로 블로그 환경 설정</a>
         </h1>
     
 
         <p class="article-excerpt">
-            목차
-blog with hexoThis is the first blog with hexo(정적 블로그 프레임워크)
-Install and Test설치1&gt; npm install -g hexo-cli
-초기화123&gt; hexo init blog&gt; cd blog&gt; npm install
-포스트 생성123&gt; hexo new &#123;post-
+            Hexo, github pages로 블로그 환경 설정hexo를 이용해서 정적사이트를 생성하고, github pages로 호스팅해서 블로그를 운영 할 수 있다.Comment는 정적 사이트가 아니므로 Disqus라는 서비스를 붙여서 해결 할 수 있다.(comment 붙이는데 오래 걸렸네! 검색만 잘 하면 한글로 설명해놓은 블로거들이 있어 쉬움에도 불구하고..확
         </p>
     </div>
 </article>
@@ -190,7 +216,7 @@ Install and Test설치1&gt; npm install -g hexo-cli
             
                 
                 <li>
-                    <a class="social-tooltip" title="twitter" href="/blogtest/" target="_blank">
+                    <a class="social-tooltip" title="twitter" href="/" target="_blank">
                         <i class="icon fa fa-twitter"></i>
                     </a>
                 </li>
@@ -198,7 +224,7 @@ Install and Test설치1&gt; npm install -g hexo-cli
             
                 
                 <li>
-                    <a class="social-tooltip" title="facebook" href="/blogtest/" target="_blank">
+                    <a class="social-tooltip" title="facebook" href="/" target="_blank">
                         <i class="icon fa fa-facebook"></i>
                     </a>
                 </li>
@@ -206,7 +232,7 @@ Install and Test설치1&gt; npm install -g hexo-cli
             
                 
                 <li>
-                    <a class="social-tooltip" title="google-plus" href="/blogtest/" target="_blank">
+                    <a class="social-tooltip" title="google-plus" href="/" target="_blank">
                         <i class="icon fa fa-google-plus"></i>
                     </a>
                 </li>
@@ -222,7 +248,7 @@ Install and Test설치1&gt; npm install -g hexo-cli
             
                 
                 <li>
-                    <a class="social-tooltip" title="weibo" href="/blogtest/" target="_blank">
+                    <a class="social-tooltip" title="weibo" href="/" target="_blank">
                         <i class="icon fa fa-weibo"></i>
                     </a>
                 </li>
@@ -230,7 +256,7 @@ Install and Test설치1&gt; npm install -g hexo-cli
             
                 
                 <li>
-                    <a class="social-tooltip" title="rss" href="/blogtest/" target="_blank">
+                    <a class="social-tooltip" title="rss" href="/" target="_blank">
                         <i class="icon fa fa-rss"></i>
                     </a>
                 </li>
@@ -251,8 +277,26 @@ Install and Test설치1&gt; npm install -g hexo-cli
                     <li>
                         
                         <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Blog/">Blog</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Blog/Hexo/">Hexo</a></p>
+                            <p class="item-title"><a href="/2017/06/20/Hexo-github-pages로-블로그-환경-설정/" class="title">Hexo, github pages로 블로그 환경 설정</a></p>
+                            <p class="item-date"><time datetime="2017-06-20T13:07:49.000Z" itemprop="datePublished">2017-06-20</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="/blogtest/2017/06/16/hello-world/" class="title">Hello World</a></p>
+                            <p class="item-title"><a href="/2017/06/20/google에서-github-pages-검색-설정/" class="title">google에서 github pages 검색 설정</a></p>
+                            <p class="item-date"><time datetime="2017-06-20T13:07:18.000Z" itemprop="datePublished">2017-06-20</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2017/06/16/hello-world/" class="title">Hello World</a></p>
                             <p class="item-date"><time datetime="2017-06-16T14:42:04.000Z" itemprop="datePublished">2017-06-16</time></p>
                         </div>
                     </li>
@@ -260,8 +304,8 @@ Install and Test설치1&gt; npm install -g hexo-cli
                     <li>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/blogtest/categories/Blog/">Blog</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/blogtest/categories/Blog/Hexo/">Hexo</a></p>
-                            <p class="item-title"><a href="/blogtest/2017/05/27/First-Post-Test/" class="title">Hexo, github 환경 설정</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/Blog/">Blog</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Blog/Hexo/">Hexo</a></p>
+                            <p class="item-title"><a href="/2017/05/27/First-Post-Test/" class="title">Hexo, github pages로 블로그 환경 설정</a></p>
                             <p class="item-date"><time datetime="2017-05-27T14:18:59.000Z" itemprop="datePublished">2017-05-27</time></p>
                         </div>
                     </li>
@@ -275,7 +319,7 @@ Install and Test설치1&gt; npm install -g hexo-cli
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blogtest/categories/Blog/">Blog</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blogtest/categories/Blog/Hexo/">Hexo</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/Hexo/">Hexo</a><span class="category-list-count">2</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -285,7 +329,7 @@ Install and Test설치1&gt; npm install -g hexo-cli
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">arxius</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blogtest/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blogtest/archives/2017/05/">May 2017</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -295,7 +339,7 @@ Install and Test설치1&gt; npm install -g hexo-cli
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">etiquetes</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blogtest/tags/Environment/">Environment</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blogtest/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Environment/">Environment</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -305,7 +349,7 @@ Install and Test설치1&gt; npm install -g hexo-cli
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">etiqueta cloud</h3>
         <div class="widget tagcloud">
-            <a href="/blogtest/tags/Environment/" style="font-size: 10px;">Environment</a> <a href="/blogtest/tags/Hexo/" style="font-size: 10px;">Hexo</a>
+            <a href="/tags/Environment/" style="font-size: 10px;">Environment</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a>
         </div>
     </div>
 
@@ -339,7 +383,7 @@ Install and Test설치1&gt; npm install -g hexo-cli
             <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
             <div class="credit">
                 <h1 class="logo-wrap">
-                    <a href="/blogtest/" class="logo"></a>
+                    <a href="/" class="logo"></a>
                 </h1>
                 <p>&copy; 2017 Robert Kim</p>
                 <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
@@ -366,24 +410,24 @@ Install and Test설치1&gt; npm install -g hexo-cli
 
 
     
-        <script src="/blogtest/libs/lightgallery/js/lightgallery.min.js"></script>
-        <script src="/blogtest/libs/lightgallery/js/lg-thumbnail.min.js"></script>
-        <script src="/blogtest/libs/lightgallery/js/lg-pager.min.js"></script>
-        <script src="/blogtest/libs/lightgallery/js/lg-autoplay.min.js"></script>
-        <script src="/blogtest/libs/lightgallery/js/lg-fullscreen.min.js"></script>
-        <script src="/blogtest/libs/lightgallery/js/lg-zoom.min.js"></script>
-        <script src="/blogtest/libs/lightgallery/js/lg-hash.min.js"></script>
-        <script src="/blogtest/libs/lightgallery/js/lg-share.min.js"></script>
-        <script src="/blogtest/libs/lightgallery/js/lg-video.min.js"></script>
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
     
     
-        <script src="/blogtest/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
     
     
 
 
 <!-- Custom Scripts -->
-<script src="/blogtest/js/main.js"></script>
+<script src="/js/main.js"></script>
 
     </div>
 </body>
