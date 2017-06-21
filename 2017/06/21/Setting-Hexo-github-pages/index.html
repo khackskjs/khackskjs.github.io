@@ -6,19 +6,19 @@
     <title>블로그 시작하기(환경 설정: Hexo, github pages) | sVeloper&#39;s</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="Hexo,Environment" />
+        <meta name="keywords" content="Hexo,Environment,Follow me" />
     
-    <meta name="description" content="순서는 크게 아래 3단계  hexo 설치 및 정적 페이지 생성 github repository 생성 github 연동 및 Disqus 설정 후 배포  한국의 현실을 감안하면, 대부분 windows, 일부 macOS, 더 일부 Linux, 그리고 그외(죄…송하네요;;)를 사용 할 것이라 생각한다.그리하여 대부분 windows 기반으로 설명을 할 예정이다. (">
-<meta name="keywords" content="Hexo,Environment">
+    <meta name="description" content="순서는 크게 아래 3단계  hexo 설치 및 정적 페이지 생성 github repository 생성 github 연동 및 Disqus 설정 후 배포  npm이 설치 되어 있지 않으면 node를 설치를 통해 npm을 설치하면 된다.node.js 설치 링크 Let’s just Follow me. 1. hexo 설치 및 정적 페이지 생성설치1&amp;gt; npm in">
+<meta name="keywords" content="Hexo,Environment,Follow me">
 <meta property="og:type" content="article">
 <meta property="og:title" content="블로그 시작하기(환경 설정: Hexo, github pages)">
 <meta property="og:url" content="http://khackskjs.github.io/2017/06/21/Setting-Hexo-github-pages/index.html">
 <meta property="og:site_name" content="sVeloper&#39;s">
-<meta property="og:description" content="순서는 크게 아래 3단계  hexo 설치 및 정적 페이지 생성 github repository 생성 github 연동 및 Disqus 설정 후 배포  한국의 현실을 감안하면, 대부분 windows, 일부 macOS, 더 일부 Linux, 그리고 그외(죄…송하네요;;)를 사용 할 것이라 생각한다.그리하여 대부분 windows 기반으로 설명을 할 예정이다. (">
-<meta property="og:updated_time" content="2017-06-21T14:17:29.000Z">
+<meta property="og:description" content="순서는 크게 아래 3단계  hexo 설치 및 정적 페이지 생성 github repository 생성 github 연동 및 Disqus 설정 후 배포  npm이 설치 되어 있지 않으면 node를 설치를 통해 npm을 설치하면 된다.node.js 설치 링크 Let’s just Follow me. 1. hexo 설치 및 정적 페이지 생성설치1&amp;gt; npm in">
+<meta property="og:updated_time" content="2017-06-21T14:21:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="블로그 시작하기(환경 설정: Hexo, github pages)">
-<meta name="twitter:description" content="순서는 크게 아래 3단계  hexo 설치 및 정적 페이지 생성 github repository 생성 github 연동 및 Disqus 설정 후 배포  한국의 현실을 감안하면, 대부분 windows, 일부 macOS, 더 일부 Linux, 그리고 그외(죄…송하네요;;)를 사용 할 것이라 생각한다.그리하여 대부분 windows 기반으로 설명을 할 예정이다. (">
+<meta name="twitter:description" content="순서는 크게 아래 3단계  hexo 설치 및 정적 페이지 생성 github repository 생성 github 연동 및 Disqus 설정 후 배포  npm이 설치 되어 있지 않으면 node를 설치를 통해 npm을 설치하면 된다.node.js 설치 링크 Let’s just Follow me. 1. hexo 설치 및 정적 페이지 생성설치1&amp;gt; npm in">
     
 
     
@@ -159,7 +159,7 @@
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/Environment/">Environment</a>, <a class="tag-link" href="/tags/Hexo/">Hexo</a>
+        <a class="tag-link" href="/tags/Environment/">Environment</a>, <a class="tag-link" href="/tags/Follow-me/">Follow me</a>, <a class="tag-link" href="/tags/Hexo/">Hexo</a>
     </div>
 
             </div>
@@ -172,9 +172,6 @@
 <li>github repository 생성</li>
 <li>github 연동 및 Disqus 설정 후 배포</li>
 </ol>
-<p>한국의 현실을 감안하면, 대부분 <code>windows</code>, 일부 <code>macOS</code>, 더 일부 <code>Linux</code>, 그리고 그외(<del>죄…송하네요;;</del>)를 사용 할 것이라 생각한다.<br>그리하여 대부분 <code>windows</code> 기반으로 설명을 할 예정이다. (<del>결코 내가 <code>windows</code>를 사용하는 시간이 많아서 그런건아니다</del>)<br>간간히 특이점이 있거나, 집에서 <code>macOS</code>으로 작업을 하다가 포스팅을 하면 따로 언급을 할 예정이다.</p>
-<p>아래 소스코드에서 <code>&gt;</code>는 <code>windows</code>, <code>$</code>는 <code>Linux</code> 계열의 <code>shell</code>에 입력함을 의미한다. (간혹 필요할 경우, 입력 결과도 넣을 예정)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; ipconfig</div><div class="line">$ ifconfig</div></pre></td></tr></table></figure>
 <p><code>npm</code>이 설치 되어 있지 않으면 <code>node</code>를 설치를 통해 <code>npm</code>을 설치하면 된다.<br><a href="https://nodejs.org/en/download/" target="_blank" rel="external">node.js 설치 링크</a></p>
 <p><strong>Let’s just Follow me.</strong></p>
 <h2 id="1-hexo-설치-및-정적-페이지-생성"><a href="#1-hexo-설치-및-정적-페이지-생성" class="headerlink" title="1. hexo 설치 및 정적 페이지 생성"></a>1. hexo 설치 및 정적 페이지 생성</h2><h3 id="설치"><a href="#설치" class="headerlink" title="설치"></a>설치</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; npm install -g hexo-cli</div></pre></td></tr></table></figure>
@@ -197,7 +194,7 @@
 
 
 
-    <a data-url="http://khackskjs.github.io/2017/06/21/Setting-Hexo-github-pages/" data-id="cj4732hxa00006y9ooeko34xb" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://khackskjs.github.io/2017/06/21/Setting-Hexo-github-pages/" data-id="cj4738z5z00007o9ouwrdx8kv" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -409,7 +406,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">etiquetes</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Environment/">Environment</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Environment/">Environment</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Follow-me/">Follow me</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -419,7 +416,7 @@
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">etiqueta cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/Environment/" style="font-size: 10px;">Environment</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a>
+            <a href="/tags/Environment/" style="font-size: 10px;">Environment</a> <a href="/tags/Follow-me/" style="font-size: 10px;">Follow me</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a>
         </div>
     </div>
 
