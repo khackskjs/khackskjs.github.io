@@ -8,17 +8,17 @@
     
         <meta name="keywords" content="Hexo,Environment" />
     
-    <meta name="description" content="블로그 시작하기(환경 설정: Hexo, github pages)Let’s Follow me. 크게 아래의 3단계를 따른다.  hexo 설치 및 정적 페이지 생성 github repository 생성 github 연동 및 Disqus 설정 후 배포  한국의 현실을 감안하면, 대부분 windows, 일부 macOS, 더 일부 Linux, 그리고 그외(죄…송하네">
+    <meta name="description" content="순서는 크게 아래 3단계  hexo 설치 및 정적 페이지 생성 github repository 생성 github 연동 및 Disqus 설정 후 배포  한국의 현실을 감안하면, 대부분 windows, 일부 macOS, 더 일부 Linux, 그리고 그외(죄…송하네요;;)를 사용 할 것이라 생각한다.그리하여 대부분 windows 기반으로 설명을 할 예정이다. (">
 <meta name="keywords" content="Hexo,Environment">
 <meta property="og:type" content="article">
 <meta property="og:title" content="블로그 시작하기(환경 설정: Hexo, github pages)">
 <meta property="og:url" content="http://khackskjs.github.io/2017/06/21/Setting-Hexo-github-pages/index.html">
 <meta property="og:site_name" content="sVeloper&#39;s">
-<meta property="og:description" content="블로그 시작하기(환경 설정: Hexo, github pages)Let’s Follow me. 크게 아래의 3단계를 따른다.  hexo 설치 및 정적 페이지 생성 github repository 생성 github 연동 및 Disqus 설정 후 배포  한국의 현실을 감안하면, 대부분 windows, 일부 macOS, 더 일부 Linux, 그리고 그외(죄…송하네">
-<meta property="og:updated_time" content="2017-06-21T14:13:13.000Z">
+<meta property="og:description" content="순서는 크게 아래 3단계  hexo 설치 및 정적 페이지 생성 github repository 생성 github 연동 및 Disqus 설정 후 배포  한국의 현실을 감안하면, 대부분 windows, 일부 macOS, 더 일부 Linux, 그리고 그외(죄…송하네요;;)를 사용 할 것이라 생각한다.그리하여 대부분 windows 기반으로 설명을 할 예정이다. (">
+<meta property="og:updated_time" content="2017-06-21T14:17:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="블로그 시작하기(환경 설정: Hexo, github pages)">
-<meta name="twitter:description" content="블로그 시작하기(환경 설정: Hexo, github pages)Let’s Follow me. 크게 아래의 3단계를 따른다.  hexo 설치 및 정적 페이지 생성 github repository 생성 github 연동 및 Disqus 설정 후 배포  한국의 현실을 감안하면, 대부분 windows, 일부 macOS, 더 일부 Linux, 그리고 그외(죄…송하네">
+<meta name="twitter:description" content="순서는 크게 아래 3단계  hexo 설치 및 정적 페이지 생성 github repository 생성 github 연동 및 Disqus 설정 후 배포  한국의 현실을 감안하면, 대부분 windows, 일부 macOS, 더 일부 Linux, 그리고 그외(죄…송하네요;;)를 사용 할 것이라 생각한다.그리하여 대부분 windows 기반으로 설명을 할 예정이다. (">
     
 
     
@@ -166,8 +166,7 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="블로그-시작하기-환경-설정-Hexo-github-pages"><a href="#블로그-시작하기-환경-설정-Hexo-github-pages" class="headerlink" title="블로그 시작하기(환경 설정: Hexo, github pages)"></a>블로그 시작하기(환경 설정: Hexo, github pages)</h1><p>Let’s Follow me.</p>
-<p>크게 아래의 3단계를 따른다.</p>
+            <p>순서는 크게 아래 3단계</p>
 <ol>
 <li>hexo 설치 및 정적 페이지 생성</li>
 <li>github repository 생성</li>
@@ -177,6 +176,7 @@
 <p>아래 소스코드에서 <code>&gt;</code>는 <code>windows</code>, <code>$</code>는 <code>Linux</code> 계열의 <code>shell</code>에 입력함을 의미한다. (간혹 필요할 경우, 입력 결과도 넣을 예정)</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; ipconfig</div><div class="line">$ ifconfig</div></pre></td></tr></table></figure>
 <p><code>npm</code>이 설치 되어 있지 않으면 <code>node</code>를 설치를 통해 <code>npm</code>을 설치하면 된다.<br><a href="https://nodejs.org/en/download/" target="_blank" rel="external">node.js 설치 링크</a></p>
+<p><strong>Let’s just Follow me.</strong></p>
 <h2 id="1-hexo-설치-및-정적-페이지-생성"><a href="#1-hexo-설치-및-정적-페이지-생성" class="headerlink" title="1. hexo 설치 및 정적 페이지 생성"></a>1. hexo 설치 및 정적 페이지 생성</h2><h3 id="설치"><a href="#설치" class="headerlink" title="설치"></a>설치</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; npm install -g hexo-cli</div></pre></td></tr></table></figure>
 <h3 id="초기화"><a href="#초기화" class="headerlink" title="초기화"></a>초기화</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; hexo init blog</div><div class="line">&gt; <span class="built_in">cd</span> blog</div><div class="line">&gt; npm install</div></pre></td></tr></table></figure>
 <h3 id="포스트-생성"><a href="#포스트-생성" class="headerlink" title="포스트 생성"></a>포스트 생성</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; hexo new &#123;post-name&#125;</div><div class="line"><span class="comment"># or</span></div><div class="line">&gt; hexo n &#123;post-name&#125;</div></pre></td></tr></table></figure>
@@ -197,7 +197,7 @@
 
 
 
-    <a data-url="http://khackskjs.github.io/2017/06/21/Setting-Hexo-github-pages/" data-id="cj472x2tm00006a9osv3m4ate" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://khackskjs.github.io/2017/06/21/Setting-Hexo-github-pages/" data-id="cj4732hxa00006y9ooeko34xb" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
