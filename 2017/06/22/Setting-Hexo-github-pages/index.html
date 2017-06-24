@@ -8,17 +8,19 @@
     
         <meta name="keywords" content="Hexo,Environment,Follow me" />
     
-    <meta name="description" content="순서는 크게 아래 3단계  hexo 설치 및 정적 페이지 생성 github repository 생성 github 연동 및 Disqus 설정 후 배포  npm이 설치 되어 있지 않으면 node를 설치를 통해 npm을 설치하면 된다.node.js 설치 링크  Let’s just Follow me.  1. hexo 설치 및 정적 페이지 생성설치1&amp;gt; npm">
+    <meta name="description" content="순서는 크게 아래 3단계  hexo 설치 및 정적 페이지 생성 github repository 생성 github 연동 및 Disqus 설정 후 배포   Let’s just Follow me.  npm이 설치 되어 있지 않으면 node.js를 설치하면 npm이 설치된다. 1. hexo 설치 및 정적 페이지 생성설치1&amp;gt; npm install -g hexo">
 <meta name="keywords" content="Hexo,Environment,Follow me">
 <meta property="og:type" content="article">
 <meta property="og:title" content="블로그 시작 환경 설정 (Hexo, github pages)">
 <meta property="og:url" content="http://khackskjs.github.io/2017/06/22/Setting-Hexo-github-pages/index.html">
 <meta property="og:site_name" content="sVeloper&#39;s">
-<meta property="og:description" content="순서는 크게 아래 3단계  hexo 설치 및 정적 페이지 생성 github repository 생성 github 연동 및 Disqus 설정 후 배포  npm이 설치 되어 있지 않으면 node를 설치를 통해 npm을 설치하면 된다.node.js 설치 링크  Let’s just Follow me.  1. hexo 설치 및 정적 페이지 생성설치1&amp;gt; npm">
-<meta property="og:updated_time" content="2017-06-21T15:02:36.000Z">
+<meta property="og:description" content="순서는 크게 아래 3단계  hexo 설치 및 정적 페이지 생성 github repository 생성 github 연동 및 Disqus 설정 후 배포   Let’s just Follow me.  npm이 설치 되어 있지 않으면 node.js를 설치하면 npm이 설치된다. 1. hexo 설치 및 정적 페이지 생성설치1&amp;gt; npm install -g hexo">
+<meta property="og:image" content="http://khackskjs.github.io/images/githubNewRepository.png">
+<meta property="og:updated_time" content="2017-06-24T12:32:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="블로그 시작 환경 설정 (Hexo, github pages)">
-<meta name="twitter:description" content="순서는 크게 아래 3단계  hexo 설치 및 정적 페이지 생성 github repository 생성 github 연동 및 Disqus 설정 후 배포  npm이 설치 되어 있지 않으면 node를 설치를 통해 npm을 설치하면 된다.node.js 설치 링크  Let’s just Follow me.  1. hexo 설치 및 정적 페이지 생성설치1&amp;gt; npm">
+<meta name="twitter:description" content="순서는 크게 아래 3단계  hexo 설치 및 정적 페이지 생성 github repository 생성 github 연동 및 Disqus 설정 후 배포   Let’s just Follow me.  npm이 설치 되어 있지 않으면 node.js를 설치하면 npm이 설치된다. 1. hexo 설치 및 정적 페이지 생성설치1&amp;gt; npm install -g hexo">
+<meta name="twitter:image" content="http://khackskjs.github.io/images/githubNewRepository.png">
     
 
     
@@ -69,7 +71,7 @@
                                     <a class="main-nav-list-link" href="/">Inici</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Blog/">Blog</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Blog/Hexo/">Hexo</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/test/">-test</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Blog/">Blog</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Blog/Hexo/">Hexo</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/about/index.html">Quant a</a>
@@ -170,23 +172,28 @@
 <li>github repository 생성</li>
 <li>github 연동 및 Disqus 설정 후 배포</li>
 </ol>
-<p><code>npm</code>이 설치 되어 있지 않으면 <code>node</code>를 설치를 통해 <code>npm</code>을 설치하면 된다.<br><a href="https://nodejs.org/en/download/" target="_blank" rel="external">node.js 설치 링크</a></p>
 <blockquote>
 <p><strong>Let’s just Follow me.</strong></p>
 </blockquote>
+<p><code>npm</code>이 설치 되어 있지 않으면 <a href="https://nodejs.org/en/download/" target="_blank" rel="external">node.js</a>를 설치하면 <code>npm</code>이 설치된다.</p>
 <h2 id="1-hexo-설치-및-정적-페이지-생성"><a href="#1-hexo-설치-및-정적-페이지-생성" class="headerlink" title="1. hexo 설치 및 정적 페이지 생성"></a>1. hexo 설치 및 정적 페이지 생성</h2><h3 id="설치"><a href="#설치" class="headerlink" title="설치"></a>설치</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; npm install -g hexo-cli</div></pre></td></tr></table></figure>
-<h3 id="초기화"><a href="#초기화" class="headerlink" title="초기화"></a>초기화</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; hexo init <span class="string">"sVeloperBlog"</span></div><div class="line">&gt; <span class="built_in">cd</span> blog</div><div class="line">&gt; npm install</div></pre></td></tr></table></figure>
-<h3 id="포스트-생성"><a href="#포스트-생성" class="headerlink" title="포스트 생성"></a>포스트 생성</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; hexo new &#123;post-name&#125;</div><div class="line"><span class="comment"># or</span></div><div class="line">&gt; hexo n &#123;post-name&#125;</div></pre></td></tr></table></figure>
-<p><code>/source/_post/post-name.md</code> 가 생성됨</p>
-<h3 id="확인"><a href="#확인" class="headerlink" title="확인"></a>확인</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; hexo server</div><div class="line"><span class="comment"># or</span></div><div class="line">&gt; hexo s</div></pre></td></tr></table></figure>
+<h3 id="hexo-프로젝트-생성-및-dependency-download"><a href="#hexo-프로젝트-생성-및-dependency-download" class="headerlink" title="hexo 프로젝트 생성 및 dependency download"></a>hexo 프로젝트 생성 및 dependency download</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; hexo init <span class="string">"sVeloperBlog"</span></div><div class="line">&gt; <span class="built_in">cd</span> sVeloperBlog</div><div class="line">&gt; npm install</div></pre></td></tr></table></figure>
+<h3 id="포스트-파일-생성"><a href="#포스트-파일-생성" class="headerlink" title="포스트 파일 생성"></a>포스트 파일 생성</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; hexo new <span class="string">"first post"</span></div><div class="line"><span class="comment"># or</span></div><div class="line">&gt; hexo n <span class="string">"first post"</span></div></pre></td></tr></table></figure>
+<p><code>/source/_post/first-post.md</code> 가 생성됨</p>
+<h3 id="포스트-확인"><a href="#포스트-확인" class="headerlink" title="포스트 확인"></a>포스트 확인</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; hexo server</div><div class="line"><span class="comment"># or</span></div><div class="line">&gt; hexo s</div></pre></td></tr></table></figure>
 <h3 id="정적-페이지-생성"><a href="#정적-페이지-생성" class="headerlink" title="정적 페이지 생성"></a>정적 페이지 생성</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; hexo generate</div><div class="line"><span class="comment"># or</span></div><div class="line">&gt; hexo g</div></pre></td></tr></table></figure>
-<p><code>/blog/public/</code>에 실제 서버에 올라갈 웹 페이지 생성<br>변경점이 제대로 적용되지 않을 경우 <code>hexo clean</code> 후 <code>hexo generate</code></p>
-<h2 id="Deploy"><a href="#Deploy" class="headerlink" title="Deploy"></a>Deploy</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm i hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<p><code>/blog/public/</code>에 실제 호스팅에 사용할 웹 페이지 생성 됨</p>
+<blockquote>
+<p><strong>Notice</strong><br>정적 페이지에 변경이 제대로 반영되지 않을 경우 <code>hexo clean</code> 후 <code>hexo generate</code></p>
+</blockquote>
+<h2 id="2-github-repository-생성"><a href="#2-github-repository-생성" class="headerlink" title="2. github repository 생성"></a>2. github repository 생성</h2><ol>
+<li><a href="https://github.com/" target="_blank" rel="external">github</a>로 이동 후 가입 &amp; 로그인 한다.</li>
+<li>우상단의 <code>New repository</code>를 선택한다.</li>
+</ol>
+<p><img src="/images/githubNewRepository.png" alt=""><br><img src="/images/20170622githubNewRepository.png" alt=""><br><img src="/githubNewRepository.png" alt=""><br><img src="/20170622githubNewRepository.png" alt=""></p>
+<h2 id="3-github-연동-및-Disqus-설정-후-배포"><a href="#3-github-연동-및-Disqus-설정-후-배포" class="headerlink" title="3. github 연동 및 Disqus 설정 후 배포"></a>3. github 연동 및 Disqus 설정 후 배포</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm i hexo-deployer-git --save</div></pre></td></tr></table></figure>
 <p><code>./_config.yml</code>에 GitHub 계정 입력</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#URL</span></div><div class="line"><span class="attr">url:</span> <span class="attr">https://&#123;github_id&#125;.github.io/&#123;repository&#125;</span></div><div class="line"><span class="attr">root:</span> <span class="string">/&#123;repository&#125;/</span></div><div class="line"><span class="comment"># Deployment</span></div><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">  type:</span> <span class="string">git</span></div><div class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/&#123;github_id&#125;/&#123;repository&#125;</span></div><div class="line"><span class="attr">  branch:</span> <span class="string">gh-pages</span></div></pre></td></tr></table></figure>
-<h2 id="github-repository-생성"><a href="#github-repository-생성" class="headerlink" title="github repository 생성"></a>github repository 생성</h2><ol>
-<li><a href="https://github.com/" target="_blank" rel="external">github</a>로 이동 후 가입 &amp; 로그인 한다. </li>
-</ol>
 
         </div>
         <footer class="article-footer">
@@ -194,7 +201,7 @@
 
 
 
-    <a data-url="http://khackskjs.github.io/2017/06/22/Setting-Hexo-github-pages/" data-id="cj474xs1e0004k39o62pkitvf" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://khackskjs.github.io/2017/06/22/Setting-Hexo-github-pages/" data-id="cj4bcv84t0004d29of3a2c5b0" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -279,14 +286,6 @@
             
                 
                 <li>
-                    <a class="social-tooltip" title="twitter" href="/" target="_blank">
-                        <i class="icon fa fa-twitter"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
                     <a class="social-tooltip" title="facebook" href="/" target="_blank">
                         <i class="icon fa fa-facebook"></i>
                     </a>
@@ -315,6 +314,16 @@
         
 <nav id="article-nav">
     
+        <a href="/2017/06/24/tag-test/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">més nou</strong>
+        <p class="article-nav-title">
+        
+            tag_test
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
     
         <a href="/2017/06/21/Ground-Rule/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">antic</strong>
@@ -333,6 +342,15 @@
         <h3 class="widget-title">recents</h3>
         <div class="widget">
             <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/test/">-test</a></p>
+                            <p class="item-title"><a href="/2017/06/24/tag-test/" class="title">tag_test</a></p>
+                            <p class="item-date"><time datetime="2017-06-24T12:32:56.000Z" itemprop="datePublished">2017-06-24</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -370,7 +388,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/Hexo/">Hexo</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/test/">-test</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/Hexo/">Hexo</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -380,7 +398,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">arxius</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">3</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">4</span></li></ul>
         </div>
     </div>
 
@@ -390,7 +408,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">etiquetes</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Environment/">Environment</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Follow-me/">Follow me</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ground-rule/">ground rule</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/">-test</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Environment/">Environment</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Follow-me/">Follow me</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ground-rule/">ground rule</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -400,7 +418,7 @@
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">etiqueta cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/Environment/" style="font-size: 10px;">Environment</a> <a href="/tags/Follow-me/" style="font-size: 10px;">Follow me</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/ground-rule/" style="font-size: 10px;">ground rule</a>
+            <a href="/tags/test/" style="font-size: 10px;">-test</a> <a href="/tags/Environment/" style="font-size: 10px;">Environment</a> <a href="/tags/Follow-me/" style="font-size: 10px;">Follow me</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/ground-rule/" style="font-size: 10px;">ground rule</a>
         </div>
     </div>
 
