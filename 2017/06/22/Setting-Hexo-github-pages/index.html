@@ -8,18 +8,18 @@
     
         <meta name="keywords" content="Hexo,Environment,Follow me" />
     
-    <meta name="description" content="순서는 크게 아래 3단계  hexo 설치 및 정적 페이지 생성 github repository 생성 github 연동 및 Disqus 설정 후 배포   Let’s just Follow me.  npm이 설치 되어 있지 않으면 node.js를 설치하면 npm이 설치된다. 1. hexo 설치 및 정적 페이지 생성설치1&amp;gt; npm install -g hexo">
+    <meta name="description" content="순서는 크게 아래 3단계  hexo 설치 및 정적 페이지 생성 github repository &amp;amp; Disqus ID 생성 github 연동 및 Disqus 설정 후 배포   Let’s just Follow me.  npm이 설치 되어 있지 않으면 node.js를 설치하면 npm이 설치된다. 1. hexo 설치 및 정적 페이지 생성설치1&amp;gt; npm">
 <meta name="keywords" content="Hexo,Environment,Follow me">
 <meta property="og:type" content="article">
 <meta property="og:title" content="블로그 시작 환경 설정 (Hexo, github pages)">
 <meta property="og:url" content="https://khackskjs.github.io/2017/06/22/Setting-Hexo-github-pages/index.html">
 <meta property="og:site_name" content="sVeloper&#39;s">
-<meta property="og:description" content="순서는 크게 아래 3단계  hexo 설치 및 정적 페이지 생성 github repository 생성 github 연동 및 Disqus 설정 후 배포   Let’s just Follow me.  npm이 설치 되어 있지 않으면 node.js를 설치하면 npm이 설치된다. 1. hexo 설치 및 정적 페이지 생성설치1&amp;gt; npm install -g hexo">
+<meta property="og:description" content="순서는 크게 아래 3단계  hexo 설치 및 정적 페이지 생성 github repository &amp;amp; Disqus ID 생성 github 연동 및 Disqus 설정 후 배포   Let’s just Follow me.  npm이 설치 되어 있지 않으면 node.js를 설치하면 npm이 설치된다. 1. hexo 설치 및 정적 페이지 생성설치1&amp;gt; npm">
 <meta property="og:image" content="https://khackskjs.github.io/2017/06/22/Setting-Hexo-github-pages/githubNewRepository01.png">
-<meta property="og:updated_time" content="2017-06-26T13:43:48.000Z">
+<meta property="og:updated_time" content="2017-06-26T14:03:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="블로그 시작 환경 설정 (Hexo, github pages)">
-<meta name="twitter:description" content="순서는 크게 아래 3단계  hexo 설치 및 정적 페이지 생성 github repository 생성 github 연동 및 Disqus 설정 후 배포   Let’s just Follow me.  npm이 설치 되어 있지 않으면 node.js를 설치하면 npm이 설치된다. 1. hexo 설치 및 정적 페이지 생성설치1&amp;gt; npm install -g hexo">
+<meta name="twitter:description" content="순서는 크게 아래 3단계  hexo 설치 및 정적 페이지 생성 github repository &amp;amp; Disqus ID 생성 github 연동 및 Disqus 설정 후 배포   Let’s just Follow me.  npm이 설치 되어 있지 않으면 node.js를 설치하면 npm이 설치된다. 1. hexo 설치 및 정적 페이지 생성설치1&amp;gt; npm">
 <meta name="twitter:image" content="https://khackskjs.github.io/2017/06/22/Setting-Hexo-github-pages/githubNewRepository01.png">
     
 
@@ -169,7 +169,7 @@
             <p>순서는 크게 아래 3단계</p>
 <ol>
 <li>hexo 설치 및 정적 페이지 생성</li>
-<li>github repository 생성</li>
+<li>github repository &amp; Disqus ID 생성</li>
 <li>github 연동 및 Disqus 설정 후 배포</li>
 </ol>
 <blockquote>
@@ -180,20 +180,27 @@
 <h3 id="hexo-프로젝트-생성-및-dependency-download"><a href="#hexo-프로젝트-생성-및-dependency-download" class="headerlink" title="hexo 프로젝트 생성 및 dependency download"></a>hexo 프로젝트 생성 및 dependency download</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; hexo init <span class="string">"sVeloperBlog"</span></div><div class="line">&gt; <span class="built_in">cd</span> sVeloperBlog</div><div class="line">&gt; npm install</div></pre></td></tr></table></figure>
 <h3 id="포스트-파일-생성"><a href="#포스트-파일-생성" class="headerlink" title="포스트 파일 생성"></a>포스트 파일 생성</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; hexo new <span class="string">"first post"</span></div><div class="line"><span class="comment"># or</span></div><div class="line">&gt; hexo n <span class="string">"first post"</span></div></pre></td></tr></table></figure>
 <p><code>/source/_post/first-post.md</code> 가 생성됨</p>
+<h3 id="예제-포스트"><a href="#예제-포스트" class="headerlink" title="예제 포스트"></a>예제 포스트</h3><figure class="highlight md"><figcaption><span>first-post.md</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="section"># First post</span></div><div class="line"></div><div class="line">It's my first post!</div><div class="line"></div><div class="line"><span class="section">## Introduce myself</span></div><div class="line"></div><div class="line">Hello I'm Robert Kim.</div><div class="line"></div><div class="line"><span class="section">## more..</span></div><div class="line"></div><div class="line">My Hobby List</div><div class="line"></div><div class="line"><span class="bullet">- </span>swimming</div><div class="line"><span class="bullet">- </span>cycling</div><div class="line"><span class="bullet">- </span>watching movie</div><div class="line"><span class="bullet">- </span>etc.</div></pre></td></tr></table></figure>
 <h3 id="포스트-확인"><a href="#포스트-확인" class="headerlink" title="포스트 확인"></a>포스트 확인</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; hexo server</div><div class="line"><span class="comment"># or</span></div><div class="line">&gt; hexo s</div></pre></td></tr></table></figure>
+<p>일반적으로 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 으로 확인 가능하며, command line output 으로 주소 확인 가능.</p>
 <h3 id="정적-페이지-생성"><a href="#정적-페이지-생성" class="headerlink" title="정적 페이지 생성"></a>정적 페이지 생성</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; hexo generate</div><div class="line"><span class="comment"># or</span></div><div class="line">&gt; hexo g</div></pre></td></tr></table></figure>
 <p><code>/blog/public/</code>에 실제 호스팅에 사용할 웹 페이지 생성 됨</p>
 <blockquote>
 <p><strong>Notice</strong><br>정적 페이지에 변경이 제대로 반영되지 않을 경우 <code>hexo clean</code> 후 <code>hexo generate</code></p>
 </blockquote>
-<h2 id="2-github-repository-생성"><a href="#2-github-repository-생성" class="headerlink" title="2. github repository 생성"></a>2. github repository 생성</h2><p><a href="https://github.com/" target="_blank" rel="external">github</a>로 이동 후 가입 &amp; 로그인 한다.</p>
+<h2 id="2-github-repository-amp-Disqus-ID-생성"><a href="#2-github-repository-amp-Disqus-ID-생성" class="headerlink" title="2. github repository &amp; Disqus ID 생성"></a>2. github repository &amp; Disqus ID 생성</h2><h3 id="github-repository"><a href="#github-repository" class="headerlink" title="github repository"></a>github repository</h3><p><a href="https://github.com/" target="_blank" rel="external">github</a>로 이동 후 가입 &amp; 로그인 한다.</p>
 <p>우상단의 <code>New repository</code>를 선택한다.</p>
 <p><img src="githubNewRepository01.png" alt=""></p>
 <p><code>Repository name</code>에 본인의 {<code>github ID</code>}.github.io 로 입력한 후 <code>Create repository</code>선택.<br><em>(이미 이 블로그가 <code>khackskjs.github.io</code>를 사용하고 있어서 already exists)</em></p>
 <p><img src="githubNewRepository02.png" alt=""></p>
+<h3 id="Disqus-ID"><a href="#Disqus-ID" class="headerlink" title="Disqus ID"></a>Disqus ID</h3><p>추후 추가.</p>
 <h2 id="3-github-연동-및-Disqus-설정-후-배포"><a href="#3-github-연동-및-Disqus-설정-후-배포" class="headerlink" title="3. github 연동 및 Disqus 설정 후 배포"></a>3. github 연동 및 Disqus 설정 후 배포</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; npm i hexo-deployer-git --save</div></pre></td></tr></table></figure>
-<p><code>./_config.yml</code>에 GitHub 계정 입력</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># URL</span></div><div class="line"><span class="attr">url:</span> <span class="attr">https://&#123;github_id&#125;.github.io/</span></div><div class="line"><span class="comment"># Deployment</span></div><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">  type:</span> <span class="string">git</span></div><div class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/&#123;github_id&#125;/&#123;github_id&#125;.github.io</span></div><div class="line"><span class="attr">  branch:</span> <span class="string">master</span></div><div class="line"><span class="comment"># for Disqus</span></div><div class="line"><span class="attr">disqus_shortname:</span> <span class="string">sveloper</span></div></pre></td></tr></table></figure>
+<p>GitHub 계정 및 <code>disqus</code>의 <code>shortname</code> 을 입력한다.</p>
+<figure class="highlight yml"><figcaption><span>./_config.yml</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># URL</span></div><div class="line"><span class="attr">url:</span> <span class="attr">https://&#123;github_id&#125;.github.io/</span></div><div class="line"><span class="comment"># Deployment</span></div><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">  type:</span> <span class="string">git</span></div><div class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/&#123;github_id&#125;/&#123;github_id&#125;.github.io</span></div><div class="line"><span class="attr">  branch:</span> <span class="string">master</span></div><div class="line"><span class="comment"># for Disqus</span></div><div class="line"><span class="attr">disqus_shortname:</span> <span class="string">sveloper</span></div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; hexo deploy</div><div class="line"><span class="comment"># or</span></div><div class="line">&gt; hexo d</div></pre></td></tr></table></figure>
+<p>기본적인 사용은 위의 포스팅을 따르면 문제 없을 것이다. (Disqus는 추후..)</p>
+<p>좀 더 고급진(?) 사용을 원한다면 아래 링크들을 참조 하길 바란다.</p>
+<blockquote><footer><strong>Tag Plugins</strong><cite><a href="https://hexo.io/docs/tag-plugins.html" target="_blank" rel="external">hexo.io</a></cite></footer></blockquote>
 
         </div>
         <footer class="article-footer">
@@ -201,7 +208,7 @@
 
 
 
-    <a data-url="https://khackskjs.github.io/2017/06/22/Setting-Hexo-github-pages/" data-id="cj4cp392a0004rv9otnbrsmi8" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="https://khackskjs.github.io/2017/06/22/Setting-Hexo-github-pages/" data-id="cj4e7tf4v0004hn9op5ubf5jc" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
