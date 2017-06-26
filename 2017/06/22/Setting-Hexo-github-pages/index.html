@@ -12,15 +12,15 @@
 <meta name="keywords" content="Hexo,Environment,Follow me">
 <meta property="og:type" content="article">
 <meta property="og:title" content="블로그 시작 환경 설정 (Hexo, github pages)">
-<meta property="og:url" content="http://khackskjs.github.io/2017/06/22/Setting-Hexo-github-pages/index.html">
+<meta property="og:url" content="https://khackskjs.github.io/2017/06/22/Setting-Hexo-github-pages/index.html">
 <meta property="og:site_name" content="sVeloper&#39;s">
 <meta property="og:description" content="순서는 크게 아래 3단계  hexo 설치 및 정적 페이지 생성 github repository 생성 github 연동 및 Disqus 설정 후 배포   Let’s just Follow me.  npm이 설치 되어 있지 않으면 node.js를 설치하면 npm이 설치된다. 1. hexo 설치 및 정적 페이지 생성설치1&amp;gt; npm install -g hexo">
-<meta property="og:image" content="http://khackskjs.github.io/images/githubNewRepository.png">
-<meta property="og:updated_time" content="2017-06-24T12:32:45.000Z">
+<meta property="og:image" content="https://khackskjs.github.io/2017/06/22/Setting-Hexo-github-pages/githubNewRepository01.png">
+<meta property="og:updated_time" content="2017-06-26T13:43:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="블로그 시작 환경 설정 (Hexo, github pages)">
 <meta name="twitter:description" content="순서는 크게 아래 3단계  hexo 설치 및 정적 페이지 생성 github repository 생성 github 연동 및 Disqus 설정 후 배포   Let’s just Follow me.  npm이 설치 되어 있지 않으면 node.js를 설치하면 npm이 설치된다. 1. hexo 설치 및 정적 페이지 생성설치1&amp;gt; npm install -g hexo">
-<meta name="twitter:image" content="http://khackskjs.github.io/images/githubNewRepository.png">
+<meta name="twitter:image" content="https://khackskjs.github.io/2017/06/22/Setting-Hexo-github-pages/githubNewRepository01.png">
     
 
     
@@ -186,14 +186,14 @@
 <blockquote>
 <p><strong>Notice</strong><br>정적 페이지에 변경이 제대로 반영되지 않을 경우 <code>hexo clean</code> 후 <code>hexo generate</code></p>
 </blockquote>
-<h2 id="2-github-repository-생성"><a href="#2-github-repository-생성" class="headerlink" title="2. github repository 생성"></a>2. github repository 생성</h2><ol>
-<li><a href="https://github.com/" target="_blank" rel="external">github</a>로 이동 후 가입 &amp; 로그인 한다.</li>
-<li>우상단의 <code>New repository</code>를 선택한다.</li>
-</ol>
-<p><img src="/images/githubNewRepository.png" alt=""><br><img src="/images/20170622githubNewRepository.png" alt=""><br><img src="/githubNewRepository.png" alt=""><br><img src="/20170622githubNewRepository.png" alt=""></p>
-<h2 id="3-github-연동-및-Disqus-설정-후-배포"><a href="#3-github-연동-및-Disqus-설정-후-배포" class="headerlink" title="3. github 연동 및 Disqus 설정 후 배포"></a>3. github 연동 및 Disqus 설정 후 배포</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm i hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<h2 id="2-github-repository-생성"><a href="#2-github-repository-생성" class="headerlink" title="2. github repository 생성"></a>2. github repository 생성</h2><p><a href="https://github.com/" target="_blank" rel="external">github</a>로 이동 후 가입 &amp; 로그인 한다.</p>
+<p>우상단의 <code>New repository</code>를 선택한다.</p>
+<p><img src="githubNewRepository01.png" alt=""></p>
+<p><code>Repository name</code>에 본인의 {<code>github ID</code>}.github.io 로 입력한 후 <code>Create repository</code>선택.<br><em>(이미 이 블로그가 <code>khackskjs.github.io</code>를 사용하고 있어서 already exists)</em></p>
+<p><img src="githubNewRepository02.png" alt=""></p>
+<h2 id="3-github-연동-및-Disqus-설정-후-배포"><a href="#3-github-연동-및-Disqus-설정-후-배포" class="headerlink" title="3. github 연동 및 Disqus 설정 후 배포"></a>3. github 연동 및 Disqus 설정 후 배포</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; npm i hexo-deployer-git --save</div></pre></td></tr></table></figure>
 <p><code>./_config.yml</code>에 GitHub 계정 입력</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#URL</span></div><div class="line"><span class="attr">url:</span> <span class="attr">https://&#123;github_id&#125;.github.io/&#123;repository&#125;</span></div><div class="line"><span class="attr">root:</span> <span class="string">/&#123;repository&#125;/</span></div><div class="line"><span class="comment"># Deployment</span></div><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">  type:</span> <span class="string">git</span></div><div class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/&#123;github_id&#125;/&#123;repository&#125;</span></div><div class="line"><span class="attr">  branch:</span> <span class="string">gh-pages</span></div></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># URL</span></div><div class="line"><span class="attr">url:</span> <span class="attr">https://&#123;github_id&#125;.github.io/</span></div><div class="line"><span class="comment"># Deployment</span></div><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">  type:</span> <span class="string">git</span></div><div class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/&#123;github_id&#125;/&#123;github_id&#125;.github.io</span></div><div class="line"><span class="attr">  branch:</span> <span class="string">master</span></div><div class="line"><span class="comment"># for Disqus</span></div><div class="line"><span class="attr">disqus_shortname:</span> <span class="string">sveloper</span></div></pre></td></tr></table></figure>
 
         </div>
         <footer class="article-footer">
@@ -201,7 +201,7 @@
 
 
 
-    <a data-url="http://khackskjs.github.io/2017/06/22/Setting-Hexo-github-pages/" data-id="cj4bcv84t0004d29of3a2c5b0" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="https://khackskjs.github.io/2017/06/22/Setting-Hexo-github-pages/" data-id="cj4cp392a0004rv9otnbrsmi8" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -466,7 +466,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://khackskjs.github.io/2017/06/22/Setting-Hexo-github-pages/';
+    var disqus_url = 'https://khackskjs.github.io/2017/06/22/Setting-Hexo-github-pages/';
     
     (function() {
     var dsq = document.createElement('script');
