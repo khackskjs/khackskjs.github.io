@@ -5,7 +5,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://khackskjs.github.io/"/>
-  <updated>2017-07-01T13:17:15.000Z</updated>
+  <updated>2017-07-19T12:32:18.000Z</updated>
   <id>http://khackskjs.github.io/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://khackskjs.github.io/2017/06/30/hexo-markdown-syntax/"/>
     <id>http://khackskjs.github.io/2017/06/30/hexo-markdown-syntax/</id>
     <published>2017-06-30T14:13:04.000Z</published>
-    <updated>2017-07-01T13:17:15.000Z</updated>
+    <updated>2017-07-19T12:32:18.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="유용한-markdown-문법"><a href="#유용한-markdown-문법" class="headerlink" title="유용한 markdown 문법"></a>유용한 markdown 문법</h1><h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><p>``` [language] [title] [url] [link text] code snippet ```</p>
+    <content type="html"><![CDATA[<h1 id="유용한-markdown-문법"><a href="#유용한-markdown-문법" class="headerlink" title="유용한 markdown 문법"></a>유용한 markdown 문법</h1><h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 3 backticks</span></div><div class="line"><span class="string">''</span><span class="string">'[language] [title] [url] [link text]</span></div><div class="line">code snippet</div><div class="line">'<span class="string">''</span></div></pre></td></tr></table></figure>
 <h2 id="YouTube"><a href="#YouTube" class="headerlink" title="YouTube"></a>YouTube</h2><p>video_id: 유튜브에서 공유를 누른 후 나오는 URL</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% youtube video_id %&#125;</div><div class="line"><span class="comment"># example</span></div><div class="line">&#123;% youtube q8GJh96pNu4 %&#125;</div></pre></td></tr></table></figure>
 <h2 id="Insert-Post"><a href="#Insert-Post" class="headerlink" title="Insert Post"></a>Insert Post</h2><p>slug: 포스트 제목. 일자를 제외한 파일 제목.<br>post_path: 해당 포스트의 URL 주소가 표시 됨<br>post_link: 해당 포스트의 링크가 표시 됨</p>
@@ -30,7 +30,9 @@
 
 
 
-<h2 id="Image"><a href="#Image" class="headerlink" title="Image"></a>Image</h2>]]></content>
+<h2 id="Image"><a href="#Image" class="headerlink" title="Image"></a>Image</h2><p>new post 폴더별 설정 후</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">![&#123;description&#125;](&#123;Image path&#125;)</div><div class="line"><span class="comment"># or</span></div><div class="line">&#123;% asset_img IMG_3391.JPG hi %&#125;</div><div class="line"></div><div class="line"><span class="comment"># example</span></div><div class="line">![this is my picture](Its_me.jpg)</div></pre></td></tr></table></figure>
+]]></content>
     
     <summary type="html">
     
@@ -50,19 +52,23 @@
     <link href="http://khackskjs.github.io/2017/06/24/tag-test/"/>
     <id>http://khackskjs.github.io/2017/06/24/tag-test/</id>
     <published>2017-06-24T12:32:56.000Z</published>
-    <updated>2017-06-24T14:02:51.000Z</updated>
+    <updated>2017-07-19T12:28:19.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="tag-test"><a href="#tag-test" class="headerlink" title="tag test"></a>tag test</h1><img src="/path/to/image" class="[class names]" title="[width] [height] [title text [alt text]]">
+    <content type="html"><![CDATA[<h1 id="tag-test"><a href="#tag-test" class="headerlink" title="tag test"></a>tag test</h1><div style="text-align:center">
+  <div class="github-card" data-user="" data-repo="" data-width="400" data-theme="default" data-target="" data-client-id="" data-client-secret=""></div>
+</div>
+<script src="/github-card-lib/githubcard.js"></script>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% img [class names] /path/to/image [width] [height] [title text [alt text]] %&#125;</div></pre></td></tr></table></figure>
 <hr>
 <figure class="highlight javascript"><figcaption><span>test.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">tset</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'hi'</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <figure class="highlight javascript"><figcaption><span>test.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">tset</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'hi'</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><img src="IMG_3391.JPG" alt=""></p>
-<hr>
-<img src="/2017/06/24/tag-test/IMG_3391.JPG" alt="hi" title="hi">]]></content>
+]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;tag-test&quot;&gt;&lt;a href=&quot;#tag-test&quot; class=&quot;headerlink&quot; title=&quot;tag test&quot;&gt;&lt;/a&gt;tag test&lt;/h1&gt;&lt;img src=&quot;/path/to/image&quot; class=&quot;[class names]&quot; t
+      &lt;h1 id=&quot;tag-test&quot;&gt;&lt;a href=&quot;#tag-test&quot; class=&quot;headerlink&quot; title=&quot;tag test&quot;&gt;&lt;/a&gt;tag test&lt;/h1&gt;&lt;div style=&quot;text-align:center&quot;&gt;
+  &lt;div class=&quot;git
     
     </summary>
     
@@ -178,7 +184,7 @@
     <link href="http://khackskjs.github.io/2017/06/21/starting-blog/"/>
     <id>http://khackskjs.github.io/2017/06/21/starting-blog/</id>
     <published>2017-06-21T12:44:18.000Z</published>
-    <updated>2017-06-21T15:04:40.000Z</updated>
+    <updated>2017-07-26T12:30:53.000Z</updated>
     
     <content type="html"><![CDATA[<p>블로그.</p>
 <p>일하다 필요에 의해 혹은 호기심으로 공부한 것들은 자주 접하지 않으면 얼마 지나지 않아 사라져 버린다. (<em>나의 기억력은 RAM이라 불리우는…</em>)<br>그리고 대충 정리해서 두다보면 여기저기 분산되어 유실되거나, 추후 보면 알아 볼 수가 없다.<br>이런 필요에 의해 뭔가 <strong>일원화</strong>된 정리방법이 필요했다.<br>그럼에도 불구하고 이쁘게 혹은 보기 좋게 글을 작성하기가 쉽지 않을 것 같아 보여 블로그는 엄두를 내지 못하고 있었다.</p>
@@ -194,7 +200,7 @@
 </blockquote>
 <p>마침내 정리 할 방법을 찾았다.</p>
 <p><code>Markdown</code>을 어느정도 익히고(<em>정말 간단한 문법들</em>), <code>hexo</code>를 이용하면 정적사이트를 생성 할 수 있다.<br>그렇게 생성한 페이지는 <code>github pages</code>로 호스팅해서 블로그로 운영 할 수 있다.<br>Comment는 정적 사이트가 아니므로 <a href="https://disqus.com/" target="_blank" rel="external"><strong>Disqus</strong></a>에 붙여 해결 할 수 있다.</p>
-<p><em>뭔가 엄청 복잡하고 어려워 보이는데.. 실은 별거없이 <a href="https://khackskjs.github.io/2017/06/21/Setting-Hexo-github-pages/"><strong>블로그 시작하기</strong></a>를 따라하면 <strong>‘나도 블로거 1일차’</strong>.</em><br><em>(comment 붙이는데 너무 오래 걸렸다! 검색만 잘 하면 한글로 설명해놓은 블로거들이 있어 쉬움에도 불구하고..)</em></p>
+<p><em>뭔가 엄청 복잡하고 어려워 보이는데.. 실은 별거없이 <a href="/2017/06/22/Setting-Hexo-github-pages/" title="**블로그 시작하기**">**블로그 시작하기**</a>를 따라하면 <strong>‘나도 블로거 1일차’</strong>.</em><br><em>(comment 붙이는데 너무 오래 걸렸다! 검색만 잘 하면 한글로 설명해놓은 블로거들이 있어 쉬움에도 불구하고..)</em></p>
 <p>그럼 조금 더 쉽게 밥상에 숟가락을 얻기 위해 나의 포스팅에 적용 될 <a href="https://khackskjs.github.io/2017/06/21/Ground-Rule/"><strong>Ground Rule</strong></a> 을 알아 보자.</p>
 ]]></content>
     

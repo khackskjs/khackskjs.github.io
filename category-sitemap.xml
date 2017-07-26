@@ -7,20 +7,6 @@
     </url>
 
     <url>
-        <loc>http://khackskjs.github.io/categories/test/</loc>
-        <lastmod>2017-06-24T14:02:51.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://khackskjs.github.io/categories/Blog/</loc>
-        <lastmod>2017-06-26T14:09:43.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://khackskjs.github.io/categories/Blog/Hexo/</loc>
         <lastmod>2017-06-26T14:09:43.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -28,8 +14,22 @@
     </url>
 
     <url>
+        <loc>http://khackskjs.github.io/categories/test/</loc>
+        <lastmod>2017-07-19T12:28:19.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://khackskjs.github.io/categories/blog/</loc>
-        <lastmod>2017-07-01T13:17:15.000Z</lastmod>
+        <lastmod>2017-07-19T12:32:18.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://khackskjs.github.io/categories/Blog/</loc>
+        <lastmod>2017-07-26T12:30:53.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

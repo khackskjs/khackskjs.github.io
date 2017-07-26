@@ -8,17 +8,17 @@
     
         <meta name="keywords" content="tip" />
     
-    <meta name="description" content="유용한 markdown 문법Code``` [language] [title] [url] [link text] code snippet ``` YouTubevideo_id: 유튜브에서 공유를 누른 후 나오는 URL 123&amp;#123;% youtube video_id %&amp;#125;# example&amp;#123;% youtube q8GJh96pNu4 %&amp;#125; Ins">
+    <meta name="description" content="유용한 markdown 문법Code1234# 3 backticks&apos;&apos;&apos;[language] [title] [url] [link text]code snippet&apos;&apos;&apos; YouTubevideo_id: 유튜브에서 공유를 누른 후 나오는 URL 123&amp;#123;% youtube video_id %&amp;#125;# example&amp;#123;% youtube q8GJh96pN">
 <meta name="keywords" content="tip">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo, markdown syntax">
 <meta property="og:url" content="http://khackskjs.github.io/2017/06/30/hexo-markdown-syntax/index.html">
 <meta property="og:site_name" content="sVeloper&#39;s">
-<meta property="og:description" content="유용한 markdown 문법Code``` [language] [title] [url] [link text] code snippet ``` YouTubevideo_id: 유튜브에서 공유를 누른 후 나오는 URL 123&amp;#123;% youtube video_id %&amp;#125;# example&amp;#123;% youtube q8GJh96pNu4 %&amp;#125; Ins">
-<meta property="og:updated_time" content="2017-07-01T13:17:15.000Z">
+<meta property="og:description" content="유용한 markdown 문법Code1234# 3 backticks&apos;&apos;&apos;[language] [title] [url] [link text]code snippet&apos;&apos;&apos; YouTubevideo_id: 유튜브에서 공유를 누른 후 나오는 URL 123&amp;#123;% youtube video_id %&amp;#125;# example&amp;#123;% youtube q8GJh96pN">
+<meta property="og:updated_time" content="2017-07-19T12:32:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo, markdown syntax">
-<meta name="twitter:description" content="유용한 markdown 문법Code``` [language] [title] [url] [link text] code snippet ``` YouTubevideo_id: 유튜브에서 공유를 누른 후 나오는 URL 123&amp;#123;% youtube video_id %&amp;#125;# example&amp;#123;% youtube q8GJh96pNu4 %&amp;#125; Ins">
+<meta name="twitter:description" content="유용한 markdown 문법Code1234# 3 backticks&apos;&apos;&apos;[language] [title] [url] [link text]code snippet&apos;&apos;&apos; YouTubevideo_id: 유튜브에서 공유를 누른 후 나오는 URL 123&amp;#123;% youtube video_id %&amp;#125;# example&amp;#123;% youtube q8GJh96pN">
     
     <link rel="canonical" href="http://khackskjs.github.io/2017/06/30/hexo-markdown-syntax/"/>
 
@@ -176,7 +176,7 @@ ga('send', 'pageview');
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="유용한-markdown-문법"><a href="#유용한-markdown-문법" class="headerlink" title="유용한 markdown 문법"></a>유용한 markdown 문법</h1><h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><p>``` [language] [title] [url] [link text] code snippet ```</p>
+            <h1 id="유용한-markdown-문법"><a href="#유용한-markdown-문법" class="headerlink" title="유용한 markdown 문법"></a>유용한 markdown 문법</h1><h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 3 backticks</span></div><div class="line"><span class="string">''</span><span class="string">'[language] [title] [url] [link text]</span></div><div class="line">code snippet</div><div class="line">'<span class="string">''</span></div></pre></td></tr></table></figure>
 <h2 id="YouTube"><a href="#YouTube" class="headerlink" title="YouTube"></a>YouTube</h2><p>video_id: 유튜브에서 공유를 누른 후 나오는 URL</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% youtube video_id %&#125;</div><div class="line"><span class="comment"># example</span></div><div class="line">&#123;% youtube q8GJh96pNu4 %&#125;</div></pre></td></tr></table></figure>
 <h2 id="Insert-Post"><a href="#Insert-Post" class="headerlink" title="Insert Post"></a>Insert Post</h2><p>slug: 포스트 제목. 일자를 제외한 파일 제목.<br>post_path: 해당 포스트의 URL 주소가 표시 됨<br>post_link: 해당 포스트의 링크가 표시 됨</p>
@@ -184,14 +184,16 @@ ga('send', 'pageview');
 
 
 
-<h2 id="Image"><a href="#Image" class="headerlink" title="Image"></a>Image</h2>
+<h2 id="Image"><a href="#Image" class="headerlink" title="Image"></a>Image</h2><p>new post 폴더별 설정 후</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">![&#123;description&#125;](&#123;Image path&#125;)</div><div class="line"><span class="comment"># or</span></div><div class="line">&#123;% asset_img IMG_3391.JPG hi %&#125;</div><div class="line"></div><div class="line"><span class="comment"># example</span></div><div class="line">![this is my picture](Its_me.jpg)</div></pre></td></tr></table></figure>
+
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="http://khackskjs.github.io/2017/06/30/hexo-markdown-syntax/" data-id="cj55cjvxx0009gp9og1f7pjwq" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://khackskjs.github.io/2017/06/30/hexo-markdown-syntax/" data-id="cj5kzocyt0009fl9ord490ose" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
