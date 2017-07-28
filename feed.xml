@@ -52,7 +52,7 @@
     <link href="http://khackskjs.github.io/2017/06/22/Setting-Hexo-github-pages/"/>
     <id>http://khackskjs.github.io/2017/06/22/Setting-Hexo-github-pages/</id>
     <published>2017-06-21T15:05:33.000Z</published>
-    <updated>2017-07-28T16:31:52.000Z</updated>
+    <updated>2017-07-28T16:34:36.000Z</updated>
     
     <content type="html"><![CDATA[<p>순서는 크게 아래 3단계</p>
 <ol>
@@ -93,7 +93,7 @@
 <figure class="highlight yml"><figcaption><span>./_config.yml</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># URL</span></div><div class="line"><span class="attr">url:</span> <span class="attr">http://&#123;github_id&#125;.github.io/</span></div><div class="line"><span class="comment"># Deployment</span></div><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">  type:</span> <span class="string">git</span></div><div class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/&#123;github_id&#125;/&#123;github_id&#125;.github.io</span></div><div class="line"><span class="attr">  branch:</span> <span class="string">master</span></div><div class="line"><span class="comment"># for Disqus</span></div><div class="line"><span class="attr">disqus_shortname:</span> <span class="string">sveloper</span></div></pre></td></tr></table></figure>
 <p>이제 설정은 끝났고, 위에서 생성한 페이지 (<code>hexo g</code>)를 배포한다.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; hexo deploy</div><div class="line"><span class="comment"># or</span></div><div class="line">&gt; hexo d</div></pre></td></tr></table></figure>
-<p>github로 push가 되었을 것이다.<br><code>_config.yml</code>파일의 <code>url</code>에 입력한 주소 (ex: <a href="https://khackskjs.github.io">https://khackskjs.github.io</a> )로 이동하면 블로그가 보일 것이다.</p>
+<p>github로 push가 되었을 것이다.<br><code>_config.yml</code>파일의 <code>url</code>에 입력한 주소(ex: <code>http://khackskjs.github.io/</code>)로 이동하면 블로그가 보일 것이다.<br><strong>(입력은 http, 호스팅은 https)</strong></p>
 <hr>
 <p>기본적인 사용은 위의 포스팅을 따르면 문제 없을 것이다.<br>(문제가 있다면 댓글 주시면 반영토록 하겠습니다)</p>
 <p>좀 더 고급진(?) 사용을 원한다면 아래 링크들을 참조 하길 바란다.</p>
