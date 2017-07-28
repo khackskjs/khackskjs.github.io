@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="sVeloper&#39;s">
 <meta property="og:description" content="순서는 크게 아래 3단계  hexo 설치 및 정적 페이지 생성 github repository &amp;amp; Disqus ID 생성 github 연동 및 Disqus 설정 후 배포   Let’s just Follow me.  npm이 설치 되어 있지 않으면 node.js를 설치하면 npm이 설치된다. 1. hexo 설치 및 정적 페이지 생성설치1&amp;gt; npm">
 <meta property="og:image" content="http://khackskjs.github.io/2017/06/22/Setting-Hexo-github-pages/githubNewRepository01.png">
-<meta property="og:updated_time" content="2017-07-28T16:23:59.000Z">
+<meta property="og:updated_time" content="2017-07-28T16:31:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="블로그 시작 환경 설정 (Hexo, github pages)">
 <meta name="twitter:description" content="순서는 크게 아래 3단계  hexo 설치 및 정적 페이지 생성 github repository &amp;amp; Disqus ID 생성 github 연동 및 Disqus 설정 후 배포   Let’s just Follow me.  npm이 설치 되어 있지 않으면 node.js를 설치하면 npm이 설치된다. 1. hexo 설치 및 정적 페이지 생성설치1&amp;gt; npm">
@@ -80,13 +80,13 @@ ga('send', 'pageview');
                         <ul id="main-nav">
                             
                                 <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="/">Inici</a>
+                                    <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
                                         <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Blog/">Blog</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Blog/Hexo/">Hexo</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/blog/">blog</a></li></ul>
                                     
                                 <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="/about/index.html">Quant a</a>
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
                                 </li>
                             
                         </ul>
@@ -94,7 +94,7 @@ ga('send', 'pageview');
                             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Cercar" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -115,8 +115,8 @@ ga('send', 'pageview');
         TRANSLATION: {
             POSTS: 'Posts',
             PAGES: 'Pages',
-            CATEGORIES: 'categories',
-            TAGS: 'etiquetes',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
             UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/',
@@ -196,7 +196,7 @@ ga('send', 'pageview');
 <h3 id="포스트-확인"><a href="#포스트-확인" class="headerlink" title="포스트 확인"></a>포스트 확인</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; hexo server</div><div class="line"><span class="comment"># or</span></div><div class="line">&gt; hexo s</div></pre></td></tr></table></figure>
 <p>일반적으로 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 으로 확인 가능하며, command line output 으로 주소 확인 가능.</p>
 <h3 id="정적-페이지-생성"><a href="#정적-페이지-생성" class="headerlink" title="정적 페이지 생성"></a>정적 페이지 생성</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; hexo generate</div><div class="line"><span class="comment"># or</span></div><div class="line">&gt; hexo g</div></pre></td></tr></table></figure>
-<p><code>/blog/public/</code>에 실제 호스팅에 사용할 웹 페이지 생성 됨</p>
+<p><code>/blog/public/</code>에 실제 호스팅에 사용할 웹 페이지가 생성된다.</p>
 <blockquote>
 <p><strong>Notice</strong><br>정적 페이지에 변경이 제대로 반영되지 않을 경우 <code>hexo clean</code> 후 <code>hexo generate</code></p>
 </blockquote>
@@ -211,12 +211,13 @@ ga('send', 'pageview');
 <p><img src="disqus_03.png" alt=""><br>Disqus의 구독 서비스를 이용하라는거 같은데 그냥 스킵하고, 우상단의 유저 아이콘을 선택한다.</p>
 <p><img src="disqus_04.png" alt=""><br>계정설정 화면이 나오면 <code>Edit Profile</code>을 선택한다.</p>
 <p><img src="disqus_05.png" alt=""><br>계정설정 화면에서 <code>Acount</code>탭에서 <code>Username</code>을 설정한다.<br>disqus service를 통틀어 고유한 이름이어야 하며, 이를통해 hexo와 연동이 가능하다.<br>(<code>hexo</code> <code>_config.yml</code>에서 <code>disqus_shortname</code>에 사용)</p>
-<h2 id="3-github-연동-및-Disqus-설정-후-배포"><a href="#3-github-연동-및-Disqus-설정-후-배포" class="headerlink" title="3. github 연동 및 Disqus 설정 후 배포"></a>3. github 연동 및 Disqus 설정 후 배포</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; npm i hexo-deployer-git --save</div></pre></td></tr></table></figure>
-<p>GitHub 계정 및 <code>disqus</code>의 <code>shortname</code> 을 입력한다.</p>
+<h2 id="3-github-연동-및-Disqus-설정-후-배포"><a href="#3-github-연동-및-Disqus-설정-후-배포" class="headerlink" title="3. github 연동 및 Disqus 설정 후 배포"></a>3. github 연동 및 Disqus 설정 후 배포</h2><p>git에 배포 해주는 플러긴을 설치한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; npm i hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<p>GitHub 계정 및 <code>disqus_shortname</code> 을 입력한다.</p>
 <figure class="highlight yml"><figcaption><span>./_config.yml</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># URL</span></div><div class="line"><span class="attr">url:</span> <span class="attr">http://&#123;github_id&#125;.github.io/</span></div><div class="line"><span class="comment"># Deployment</span></div><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">  type:</span> <span class="string">git</span></div><div class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/&#123;github_id&#125;/&#123;github_id&#125;.github.io</span></div><div class="line"><span class="attr">  branch:</span> <span class="string">master</span></div><div class="line"><span class="comment"># for Disqus</span></div><div class="line"><span class="attr">disqus_shortname:</span> <span class="string">sveloper</span></div></pre></td></tr></table></figure>
 <p>이제 설정은 끝났고, 위에서 생성한 페이지 (<code>hexo g</code>)를 배포한다.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; hexo deploy</div><div class="line"><span class="comment"># or</span></div><div class="line">&gt; hexo d</div></pre></td></tr></table></figure>
-<p>github로 push가 되었을 것이다.<br><code>_config.yml</code>파일의 <code>url</code>에 입력한 주소 (ex: <a href="http://khackskjs.github.io)로">http://khackskjs.github.io)로</a> 이동하면 블로그가 보일 것이다.</p>
+<p>github로 push가 되었을 것이다.<br><code>_config.yml</code>파일의 <code>url</code>에 입력한 주소 (ex: <a href="https://khackskjs.github.io">https://khackskjs.github.io</a> )로 이동하면 블로그가 보일 것이다.</p>
 <hr>
 <p>기본적인 사용은 위의 포스팅을 따르면 문제 없을 것이다.<br>(문제가 있다면 댓글 주시면 반영토록 하겠습니다)</p>
 <p>좀 더 고급진(?) 사용을 원한다면 아래 링크들을 참조 하길 바란다.</p>
@@ -229,7 +230,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://khackskjs.github.io/2017/06/22/Setting-Hexo-github-pages/" data-id="cj5o1rlkh000kvb9oghayjwr9" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://khackskjs.github.io/2017/06/22/Setting-Hexo-github-pages/" data-id="cj5o35n8i0005za9ou0pzftvr" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -309,7 +310,7 @@ ga('send', 'pageview');
                     <aside id="sidebar">
     <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
     <div class="sidebar-top">
-        <p>seguir:</p>
+        <p>follow:</p>
         <ul class="social-links">
             
                 
@@ -343,7 +344,7 @@ ga('send', 'pageview');
 <nav id="article-nav">
     
         <a href="/2017/06/30/hexo-markdown-syntax/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">més nou</strong>
+        <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
             hexo, markdown syntax
@@ -354,7 +355,7 @@ ga('send', 'pageview');
     
     
         <a href="/2017/06/21/Ground-Rule/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">antic</strong>
+        <strong class="article-nav-caption">older</strong>
         <p class="article-nav-title">Ground Rule</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
@@ -424,7 +425,7 @@ ga('send', 'pageview');
             
                 
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">arxius</h3>
+        <h3 class="widget-title">archives</h3>
         <div class="widget">
             <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">4</span></li></ul>
         </div>
@@ -434,7 +435,7 @@ ga('send', 'pageview');
             
                 
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">etiquetes</h3>
+        <h3 class="widget-title">tags</h3>
         <div class="widget">
             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Environment/">Environment</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Follow-me/">Follow me</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ground-rule/">ground rule</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tip/">tip</a><span class="tag-list-count">1</span></li></ul>
         </div>
@@ -444,7 +445,7 @@ ga('send', 'pageview');
             
                 
     <div class="widget-wrap widget-float">
-        <h3 class="widget-title">etiqueta cloud</h3>
+        <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
             <a href="/tags/Environment/" style="font-size: 10px;">Environment</a> <a href="/tags/Follow-me/" style="font-size: 10px;">Follow me</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/ground-rule/" style="font-size: 10px;">ground rule</a> <a href="/tags/tip/" style="font-size: 10px;">tip</a>
         </div>
