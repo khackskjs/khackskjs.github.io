@@ -48,43 +48,11 @@
   </entry>
   
   <entry>
-    <title>tag_test</title>
-    <link href="http://khackskjs.github.io/2017/06/24/tag-test/"/>
-    <id>http://khackskjs.github.io/2017/06/24/tag-test/</id>
-    <published>2017-06-24T12:32:56.000Z</published>
-    <updated>2017-07-19T12:28:19.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="tag-test"><a href="#tag-test" class="headerlink" title="tag test"></a>tag test</h1><div style="text-align:center">
-  <div class="github-card" data-user="" data-repo="" data-width="400" data-theme="default" data-target="" data-client-id="" data-client-secret=""></div>
-</div>
-<script src="/github-card-lib/githubcard.js"></script>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% img [class names] /path/to/image [width] [height] [title text [alt text]] %&#125;</div></pre></td></tr></table></figure>
-<hr>
-<figure class="highlight javascript"><figcaption><span>test.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">tset</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'hi'</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><figcaption><span>test.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">tset</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'hi'</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;tag-test&quot;&gt;&lt;a href=&quot;#tag-test&quot; class=&quot;headerlink&quot; title=&quot;tag test&quot;&gt;&lt;/a&gt;tag test&lt;/h1&gt;&lt;div style=&quot;text-align:center&quot;&gt;
-  &lt;div class=&quot;git
-    
-    </summary>
-    
-      <category term="-test" scheme="http://khackskjs.github.io/categories/test/"/>
-    
-    
-      <category term="-test" scheme="http://khackskjs.github.io/tags/test/"/>
-    
-  </entry>
-  
-  <entry>
     <title>블로그 시작 환경 설정 (Hexo, github pages)</title>
     <link href="http://khackskjs.github.io/2017/06/22/Setting-Hexo-github-pages/"/>
     <id>http://khackskjs.github.io/2017/06/22/Setting-Hexo-github-pages/</id>
     <published>2017-06-21T15:05:33.000Z</published>
-    <updated>2017-06-26T14:09:43.000Z</updated>
+    <updated>2017-07-28T16:23:59.000Z</updated>
     
     <content type="html"><![CDATA[<p>순서는 크게 아래 3단계</p>
 <ol>
@@ -113,13 +81,22 @@
 <p><img src="githubNewRepository01.png" alt=""></p>
 <p><code>Repository name</code>에 본인의 {<code>github ID</code>}.github.io 로 입력한 후 <code>Create repository</code>선택.<br><em>(이미 이 블로그가 <code>khackskjs.github.io</code>를 사용하고 있어서 already exists)</em></p>
 <p><img src="githubNewRepository02.png" alt=""></p>
-<h3 id="Disqus-ID"><a href="#Disqus-ID" class="headerlink" title="Disqus ID"></a>Disqus ID</h3><p>추후 추가.</p>
+<h3 id="Disqus-ID-생성"><a href="#Disqus-ID-생성" class="headerlink" title="Disqus ID 생성"></a>Disqus ID 생성</h3><p>댓글용 <a href="https://disqus.com/profile/signup/" target="_blank" rel="external">Disqus</a>서비스를 사용하기 위해 사이트로 이동 후 가입하거나 지원하는 SNS 연동</p>
+<p><img src="disqus_01.png" alt=""><br>이름, 이메일(인증 필요)을 이용해서 가입한다.<br>이 블로그를 위해 khackskjs@gmail.com 계정은 이용중이므로, 다른 도메인 메일을 통해 이미지 캡쳐</p>
+<p><img src="disqus_02.png" alt=""><br>코멘트를 이용 할 것이므로 위의 <strong>I want to comment on sites</strong>를 선택한다.</p>
+<p><img src="disqus_03.png" alt=""><br>Disqus의 구독 서비스를 이용하라는거 같은데 그냥 스킵하고, 우상단의 유저 아이콘을 선택한다.</p>
+<p><img src="disqus_04.png" alt=""><br>계정설정 화면이 나오면 <code>Edit Profile</code>을 선택한다.</p>
+<p><img src="disqus_05.png" alt=""><br>계정설정 화면에서 <code>Acount</code>탭에서 <code>Username</code>을 설정한다.<br>disqus service를 통틀어 고유한 이름이어야 하며, 이를통해 hexo와 연동이 가능하다.<br>(<code>hexo</code> <code>_config.yml</code>에서 <code>disqus_shortname</code>에 사용)</p>
 <h2 id="3-github-연동-및-Disqus-설정-후-배포"><a href="#3-github-연동-및-Disqus-설정-후-배포" class="headerlink" title="3. github 연동 및 Disqus 설정 후 배포"></a>3. github 연동 및 Disqus 설정 후 배포</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; npm i hexo-deployer-git --save</div></pre></td></tr></table></figure>
 <p>GitHub 계정 및 <code>disqus</code>의 <code>shortname</code> 을 입력한다.</p>
 <figure class="highlight yml"><figcaption><span>./_config.yml</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># URL</span></div><div class="line"><span class="attr">url:</span> <span class="attr">http://&#123;github_id&#125;.github.io/</span></div><div class="line"><span class="comment"># Deployment</span></div><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">  type:</span> <span class="string">git</span></div><div class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/&#123;github_id&#125;/&#123;github_id&#125;.github.io</span></div><div class="line"><span class="attr">  branch:</span> <span class="string">master</span></div><div class="line"><span class="comment"># for Disqus</span></div><div class="line"><span class="attr">disqus_shortname:</span> <span class="string">sveloper</span></div></pre></td></tr></table></figure>
+<p>이제 설정은 끝났고, 위에서 생성한 페이지 (<code>hexo g</code>)를 배포한다.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; hexo deploy</div><div class="line"><span class="comment"># or</span></div><div class="line">&gt; hexo d</div></pre></td></tr></table></figure>
-<p>기본적인 사용은 위의 포스팅을 따르면 문제 없을 것이다. (Disqus는 추후..)</p>
+<p>github로 push가 되었을 것이다.<br><code>_config.yml</code>파일의 <code>url</code>에 입력한 주소 (ex: <a href="http://khackskjs.github.io)로">http://khackskjs.github.io)로</a> 이동하면 블로그가 보일 것이다.</p>
+<hr>
+<p>기본적인 사용은 위의 포스팅을 따르면 문제 없을 것이다.<br>(문제가 있다면 댓글 주시면 반영토록 하겠습니다)</p>
 <p>좀 더 고급진(?) 사용을 원한다면 아래 링크들을 참조 하길 바란다.</p>
+<a href="/2017/06/30/hexo-markdown-syntax/" title="hexo, markdown syntax">hexo, markdown syntax</a>
 <blockquote><footer><strong>Tag Plugins</strong><cite><a href="https://hexo.io/docs/tag-plugins.html" target="_blank" rel="external">hexo.io</a></cite></footer></blockquote>
 ]]></content>
     

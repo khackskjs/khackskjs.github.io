@@ -9,34 +9,6 @@
     </url>
 
     <url>
-        <loc>http://khackskjs.github.io/tags/Hexo/</loc>
-        <lastmod>2017-06-26T14:09:43.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://khackskjs.github.io/tags/Environment/</loc>
-        <lastmod>2017-06-26T14:09:43.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://khackskjs.github.io/tags/Follow-me/</loc>
-        <lastmod>2017-06-26T14:09:43.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://khackskjs.github.io/tags/test/</loc>
-        <lastmod>2017-07-19T12:28:19.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://khackskjs.github.io/tags/tip/</loc>
         <lastmod>2017-07-19T12:32:18.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -46,6 +18,27 @@
     <url>
         <loc>http://khackskjs.github.io/tags/blog/</loc>
         <lastmod>2017-07-26T12:30:53.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://khackskjs.github.io/tags/Hexo/</loc>
+        <lastmod>2017-07-28T16:23:59.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://khackskjs.github.io/tags/Environment/</loc>
+        <lastmod>2017-07-28T16:23:59.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://khackskjs.github.io/tags/Follow-me/</loc>
+        <lastmod>2017-07-28T16:23:59.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
