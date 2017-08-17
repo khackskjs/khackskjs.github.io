@@ -9,13 +9,6 @@
     </url>
 
     <url>
-        <loc>http://khackskjs.github.io/tags/tip/</loc>
-        <lastmod>2017-07-19T12:32:18.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://khackskjs.github.io/tags/blog/</loc>
         <lastmod>2017-07-26T12:30:53.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -39,6 +32,34 @@
     <url>
         <loc>http://khackskjs.github.io/tags/Follow-me/</loc>
         <lastmod>2017-07-28T16:34:36.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://khackskjs.github.io/tags/tip/</loc>
+        <lastmod>2017-08-17T13:48:06.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://khackskjs.github.io/tags/NAS/</loc>
+        <lastmod>2017-08-17T13:53:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://khackskjs.github.io/tags/ASUS/</loc>
+        <lastmod>2017-08-17T13:53:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://khackskjs.github.io/tags/RT-N56U/</loc>
+        <lastmod>2017-08-17T13:53:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

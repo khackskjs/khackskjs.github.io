@@ -7,13 +7,6 @@
     </url>
 
     <url>
-        <loc>http://khackskjs.github.io/categories/blog/</loc>
-        <lastmod>2017-07-19T12:32:18.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://khackskjs.github.io/categories/Blog/</loc>
         <lastmod>2017-07-28T16:34:36.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -23,6 +16,13 @@
     <url>
         <loc>http://khackskjs.github.io/categories/Blog/Hexo/</loc>
         <lastmod>2017-07-28T16:34:36.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://khackskjs.github.io/categories/blog/</loc>
+        <lastmod>2017-08-17T13:48:06.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

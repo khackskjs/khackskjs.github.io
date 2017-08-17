@@ -5,7 +5,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://khackskjs.github.io/"/>
-  <updated>2017-07-19T12:32:18.000Z</updated>
+  <updated>2017-08-17T13:53:00.000Z</updated>
   <id>http://khackskjs.github.io/</id>
   
   <author>
@@ -16,11 +16,58 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>ASUS 간이 NAS (with 외장하드)</title>
+    <link href="http://khackskjs.github.io/2017/08/13/ASUS-Temporary-NAS-External-HDD/"/>
+    <id>http://khackskjs.github.io/2017/08/13/ASUS-Temporary-NAS-External-HDD/</id>
+    <published>2017-08-13T12:59:55.000Z</published>
+    <updated>2017-08-17T13:53:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="ASUS-RT-N65U-간이-NAS-사용하기"><a href="#ASUS-RT-N65U-간이-NAS-사용하기" class="headerlink" title="ASUS RT-N65U 간이 NAS 사용하기"></a>ASUS RT-N65U 간이 NAS 사용하기</h1><p>외장하드를 RT-N56U에 연결한 상태에서 Router의 설정 페이지에서 <strong>USB storage device is not responding</strong> 이란 문구가 뜨면서 <code>Media Server</code>도 설치를 할 수 없는 경우가 있다.<br>이럴 경우 외장하드를 ext3로 format 한 후 설정하면 간이 NAS를 구성 할 수 있다.</p>
+<blockquote>
+<p>Router 정펌 + ext3 format 외장하드 조합으로 간이 NAS 구성은 완료 했으나, WIFI 신호가 불안정하고, 속도에 문제가 있는 경우가 발생해서 그냥 외장하드 연결을 제거했다. (2017.08.17)<br>RT-N65U merlin firmware 는 없는것으로 보인다. 추후 openWRT firmware를 통해 삽질을 해보고 추가 하도록 하겠다.</p>
+</blockquote>
+<h2 id="외장하드-ext3-format"><a href="#외장하드-ext3-format" class="headerlink" title="외장하드 ext3 format"></a>외장하드 ext3 format</h2><p>NTFS와 FAT32를 사용하면 약간 느리다는 이야기가 있다(NTFS는 특별히 더).<br>그래서 ext3로 포멧하기로 했고, 이는 MAC에서는 <a href="https://brew.sh/" target="_blank" rel="external"><code>brew</code></a> 를 이용해서 ext3로 포멧 할 수 있다.</p>
+<h3 id="brew-설치"><a href="#brew-설치" class="headerlink" title="brew 설치"></a>brew 설치</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">$ /usr/bin/ruby -e <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></div><div class="line">==&gt; This script will install:</div><div class="line">/usr/<span class="built_in">local</span>/bin/brew</div><div class="line">/usr/<span class="built_in">local</span>/share/doc/homebrew</div><div class="line">/usr/<span class="built_in">local</span>/share/man/man1/brew.1</div><div class="line">/usr/<span class="built_in">local</span>/share/zsh/site-functions/_brew</div><div class="line">/usr/<span class="built_in">local</span>/etc/bash_completion.d/brew</div><div class="line">/usr/<span class="built_in">local</span>/Homebrew</div><div class="line"></div><div class="line">Press RETURN to <span class="built_in">continue</span> or any other key to abort</div><div class="line">==&gt; /usr/bin/sudo /bin/mkdir -p /Library/Caches/Homebrew</div><div class="line">Password:</div></pre></td></tr></table></figure>
+<p>install 명령어 입력 후 <strong>Press RETURN to continue or any other key to abort</strong>에서 <code>Enter</code>키를 눌러주고, <strong>Password</strong>ㅔ서 관리자 <code>password</code>를 입력한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">HEAD is now at e1bab7e Merge pull request <span class="comment">#3050 from Homebrew/revert-3046-double_formula_load_error</span></div></pre></td></tr></table></figure>
+<p>이전에 <code>brew</code>를 설치한적이 있다면 위의 문구를 보게 될것이고, 어쨋거나 기다리면 된다. (필자는 마지막이 해당 문구가 <code>load_error</code>로 끝나길래 오류 발생한줄 알았으나, terminal 상단의 제목표시줄이 바뀌는걸 보고 다운받는 중이란걸 알 수 있었다)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ brew install e2fsprogs</div><div class="line">==&gt; Installing dependencies <span class="keyword">for</span> e2fsprogs: gettext</div></pre></td></tr></table></figure>
+<h3 id="diskutil-로-disk-Identifier-얻기"><a href="#diskutil-로-disk-Identifier-얻기" class="headerlink" title="diskutil 로 disk Identifier 얻기"></a>diskutil 로 disk Identifier 얻기</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">$ diskutil list</div><div class="line">/dev/disk0 (internal, physical):</div><div class="line">   <span class="comment">#:                       TYPE NAME                    SIZE       IDENTIFIER</span></div><div class="line">   0:      GUID_partition_scheme                        *750.2 GB   disk0</div><div class="line">   1:                        EFI EFI                     209.7 MB   disk0s1</div><div class="line">   2:                  Apple_HFS Robert<span class="string">'s OS X           749.3 GB   disk0s2</span></div><div class="line">   3:                 Apple_Boot Recovery HD             650.0 MB   disk0s3</div><div class="line"></div><div class="line">/dev/disk1 (external, physical):</div><div class="line">   #:                       TYPE NAME                    SIZE       IDENTIFIER</div><div class="line">   0:      GUID_partition_scheme                        *250.1 GB   disk1</div><div class="line">   1:                        EFI EFI                     209.7 MB   disk1s1</div><div class="line">   2:                  Apple_HFS Robert250G              249.7 GB   disk1s2</div></pre></td></tr></table></figure>
+<p>본인이 사용할 HDD는 250G HDD로 ID는 <code>disk1</code>임을 알 수 있다.</p>
+<h3 id="ext3-format"><a href="#ext3-format" class="headerlink" title="ext3 format"></a>ext3 format</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ sudo $(brew --prefix e2fsprogs)/sbin/mkfs.ext3 /dev/disk1</div><div class="line">Password:</div><div class="line">mke2fs 1.43.5 (04-Aug-2017)</div><div class="line">/dev/disk1: Resource busy <span class="keyword">while</span> setting up superblock</div></pre></td></tr></table></figure>
+<p>위의 마지막 Resource 관련 메시지를 본다면, 해당 disk를 unmount 후 진행하면 된다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ diskutil unmount disk1s1</div><div class="line">Volume HDD_500 on disk1s1 unmounted</div><div class="line">$ sudo $(brew --prefix e2fsprogs)/sbin/mkfs.ext3 /dev/disk1</div><div class="line">mke2fs 1.43.5 (04-Aug-2017)</div><div class="line">... (중략)</div><div class="line">Writing superblocks and filesystem accounting information: <span class="keyword">done</span></div></pre></td></tr></table></figure>
+<h2 id="NAS-설정"><a href="#NAS-설정" class="headerlink" title="NAS 설정"></a>NAS 설정</h2><p>공유기 설정 페이지(default 192.168.1.1)에 접속해서 <code>USB Application</code>에서 필요한 것들(FTP, SAMBA 등)을 설치해서 사용하면 된다.<br>관련 설명은 많이 존재하므로 생략.</p>
+<p><img src="usb-applications_01.png" alt="ext3로 포맷한 HDD에 각종 App 설치 전 상태"></p>
+<p><img src="usb-applications_02.png" alt="각종 App 설치 후 상태"></p>
+<hr>
+<p><strong>Reference</strong> site</p>
+<ul>
+<li><a href="http://event.asus.com/2009/networks/disksupport/" target="_blank" rel="external">ASUS Router 모델별 Disks Compatibility List</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;ASUS-RT-N65U-간이-NAS-사용하기&quot;&gt;&lt;a href=&quot;#ASUS-RT-N65U-간이-NAS-사용하기&quot; class=&quot;headerlink&quot; title=&quot;ASUS RT-N65U 간이 NAS 사용하기&quot;&gt;&lt;/a&gt;ASUS RT-N65U 간
+    
+    </summary>
+    
+    
+      <category term="NAS" scheme="http://khackskjs.github.io/tags/NAS/"/>
+    
+      <category term="ASUS" scheme="http://khackskjs.github.io/tags/ASUS/"/>
+    
+      <category term="RT-N56U" scheme="http://khackskjs.github.io/tags/RT-N56U/"/>
+    
+  </entry>
+  
+  <entry>
     <title>hexo, markdown syntax</title>
     <link href="http://khackskjs.github.io/2017/06/30/hexo-markdown-syntax/"/>
     <id>http://khackskjs.github.io/2017/06/30/hexo-markdown-syntax/</id>
     <published>2017-06-30T14:13:04.000Z</published>
-    <updated>2017-07-19T12:32:18.000Z</updated>
+    <updated>2017-08-17T13:48:06.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="유용한-markdown-문법"><a href="#유용한-markdown-문법" class="headerlink" title="유용한 markdown 문법"></a>유용한 markdown 문법</h1><h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 3 backticks</span></div><div class="line"><span class="string">''</span><span class="string">'[language] [title] [url] [link text]</span></div><div class="line">code snippet</div><div class="line">'<span class="string">''</span></div></pre></td></tr></table></figure>
 <h2 id="YouTube"><a href="#YouTube" class="headerlink" title="YouTube"></a>YouTube</h2><p>video_id: 유튜브에서 공유를 누른 후 나오는 URL</p>
