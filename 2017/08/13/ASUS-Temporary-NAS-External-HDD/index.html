@@ -6,20 +6,20 @@
     <title>ASUS(RT-N56U) 간이 NAS 설정 (ext3) | sVeloper&#39;s</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="NAS,ASUS,RT-N56U" />
+        <meta name="keywords" content="NAS,ASUS,RT-N56U,ext3" />
     
-    <meta name="description" content="ASUS RT-N65U 간이 NAS 사용하기외장하드를 RT-N56U에 연결한 상태에서 Router의 설정 페이지에서 USB storage device is not responding 이란 문구가 뜨면서 Media Server도 설치를 할 수 없는 경우가 있다.이럴 경우 외장하드를 ext3로 format 한 후 설정하면 간이 NAS를 구성 할 수 있다.  R">
-<meta name="keywords" content="NAS,ASUS,RT-N56U">
+    <meta name="description" content="ASUS RT-N56U 간이 NAS 사용하기외장하드를 RT-N56U에 연결한 상태에서 Router의 설정 페이지에서 USB storage device is not responding 이란 문구가 뜨면서 Media Server도 설치를 할 수 없는 경우가 있다.이럴 경우 외장하드를 ext3로 format 한 후 설정하면 간이 NAS를 구성 할 수 있다.  R">
+<meta name="keywords" content="NAS,ASUS,RT-N56U,ext3">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ASUS(RT-N56U) 간이 NAS 설정 (ext3)">
 <meta property="og:url" content="http://khackskjs.github.io/2017/08/13/ASUS-Temporary-NAS-External-HDD/index.html">
 <meta property="og:site_name" content="sVeloper&#39;s">
-<meta property="og:description" content="ASUS RT-N65U 간이 NAS 사용하기외장하드를 RT-N56U에 연결한 상태에서 Router의 설정 페이지에서 USB storage device is not responding 이란 문구가 뜨면서 Media Server도 설치를 할 수 없는 경우가 있다.이럴 경우 외장하드를 ext3로 format 한 후 설정하면 간이 NAS를 구성 할 수 있다.  R">
+<meta property="og:description" content="ASUS RT-N56U 간이 NAS 사용하기외장하드를 RT-N56U에 연결한 상태에서 Router의 설정 페이지에서 USB storage device is not responding 이란 문구가 뜨면서 Media Server도 설치를 할 수 없는 경우가 있다.이럴 경우 외장하드를 ext3로 format 한 후 설정하면 간이 NAS를 구성 할 수 있다.  R">
 <meta property="og:image" content="http://khackskjs.github.io/2017/08/13/ASUS-Temporary-NAS-External-HDD/usb-applications_01.png">
-<meta property="og:updated_time" content="2017-08-17T15:17:33.000Z">
+<meta property="og:updated_time" content="2017-08-17T15:19:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ASUS(RT-N56U) 간이 NAS 설정 (ext3)">
-<meta name="twitter:description" content="ASUS RT-N65U 간이 NAS 사용하기외장하드를 RT-N56U에 연결한 상태에서 Router의 설정 페이지에서 USB storage device is not responding 이란 문구가 뜨면서 Media Server도 설치를 할 수 없는 경우가 있다.이럴 경우 외장하드를 ext3로 format 한 후 설정하면 간이 NAS를 구성 할 수 있다.  R">
+<meta name="twitter:description" content="ASUS RT-N56U 간이 NAS 사용하기외장하드를 RT-N56U에 연결한 상태에서 Router의 설정 페이지에서 USB storage device is not responding 이란 문구가 뜨면서 Media Server도 설치를 할 수 없는 경우가 있다.이럴 경우 외장하드를 ext3로 format 한 후 설정하면 간이 NAS를 구성 할 수 있다.  R">
 <meta name="twitter:image" content="http://khackskjs.github.io/2017/08/13/ASUS-Temporary-NAS-External-HDD/usb-applications_01.png">
     
     <link rel="canonical" href="http://khackskjs.github.io/2017/08/13/ASUS-Temporary-NAS-External-HDD/"/>
@@ -171,14 +171,14 @@ ga('send', 'pageview');
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/ASUS/">ASUS</a>, <a class="tag-link" href="/tags/NAS/">NAS</a>, <a class="tag-link" href="/tags/RT-N56U/">RT-N56U</a>
+        <a class="tag-link" href="/tags/ASUS/">ASUS</a>, <a class="tag-link" href="/tags/NAS/">NAS</a>, <a class="tag-link" href="/tags/RT-N56U/">RT-N56U</a>, <a class="tag-link" href="/tags/ext3/">ext3</a>
     </div>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="ASUS-RT-N65U-간이-NAS-사용하기"><a href="#ASUS-RT-N65U-간이-NAS-사용하기" class="headerlink" title="ASUS RT-N65U 간이 NAS 사용하기"></a>ASUS RT-N65U 간이 NAS 사용하기</h1><p>외장하드를 RT-N56U에 연결한 상태에서 Router의 설정 페이지에서 <strong>USB storage device is not responding</strong> 이란 문구가 뜨면서 <code>Media Server</code>도 설치를 할 수 없는 경우가 있다.<br>이럴 경우 외장하드를 ext3로 format 한 후 설정하면 간이 NAS를 구성 할 수 있다.</p>
+            <h1 id="ASUS-RT-N56U-간이-NAS-사용하기"><a href="#ASUS-RT-N56U-간이-NAS-사용하기" class="headerlink" title="ASUS RT-N56U 간이 NAS 사용하기"></a>ASUS RT-N56U 간이 NAS 사용하기</h1><p>외장하드를 RT-N56U에 연결한 상태에서 Router의 설정 페이지에서 <strong>USB storage device is not responding</strong> 이란 문구가 뜨면서 <code>Media Server</code>도 설치를 할 수 없는 경우가 있다.<br>이럴 경우 외장하드를 ext3로 format 한 후 설정하면 간이 NAS를 구성 할 수 있다.</p>
 <blockquote>
 <p>Router 정펌 + ext3 format 외장하드 조합으로 간이 NAS 구성은 완료 했으나, WIFI 신호가 불안정하고, 속도에 문제가 있는 경우가 발생해서 그냥 외장하드 연결을 제거했다. (2017.08.17)<br>RT-N65U merlin firmware 는 없는것으로 보인다. 추후 openWRT firmware를 통해 삽질을 해보고 추가 하도록 하겠다.</p>
 </blockquote>
@@ -208,7 +208,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://khackskjs.github.io/2017/08/13/ASUS-Temporary-NAS-External-HDD/" data-id="cj6glb3zi00091p9o8j8td0tb" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://khackskjs.github.io/2017/08/13/ASUS-Temporary-NAS-External-HDD/" data-id="cj6gle0pt00052n9o88famqko" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -414,7 +414,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">etiquetes</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ASUS/">ASUS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Environment/">Environment</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Follow-me/">Follow me</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NAS/">NAS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RT-N56U/">RT-N56U</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ground-rule/">ground rule</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tip/">tip</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ASUS/">ASUS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Environment/">Environment</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Follow-me/">Follow me</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NAS/">NAS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RT-N56U/">RT-N56U</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ext3/">ext3</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ground-rule/">ground rule</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tip/">tip</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -424,7 +424,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">etiqueta cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/ASUS/" style="font-size: 10px;">ASUS</a> <a href="/tags/Environment/" style="font-size: 10px;">Environment</a> <a href="/tags/Follow-me/" style="font-size: 10px;">Follow me</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/NAS/" style="font-size: 10px;">NAS</a> <a href="/tags/RT-N56U/" style="font-size: 10px;">RT-N56U</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/ground-rule/" style="font-size: 10px;">ground rule</a> <a href="/tags/tip/" style="font-size: 10px;">tip</a>
+            <a href="/tags/ASUS/" style="font-size: 10px;">ASUS</a> <a href="/tags/Environment/" style="font-size: 10px;">Environment</a> <a href="/tags/Follow-me/" style="font-size: 10px;">Follow me</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/NAS/" style="font-size: 10px;">NAS</a> <a href="/tags/RT-N56U/" style="font-size: 10px;">RT-N56U</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/ext3/" style="font-size: 10px;">ext3</a> <a href="/tags/ground-rule/" style="font-size: 10px;">ground rule</a> <a href="/tags/tip/" style="font-size: 10px;">tip</a>
         </div>
     </div>
 
