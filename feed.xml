@@ -5,7 +5,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://khackskjs.github.io/"/>
-  <updated>2017-08-17T13:53:00.000Z</updated>
+  <updated>2017-08-17T15:17:00.000Z</updated>
   <id>http://khackskjs.github.io/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>ASUS 간이 NAS (with 외장하드)</title>
+    <title>ASUS(NT-N56U) 간이 NAS 설정 (ext3)</title>
     <link href="http://khackskjs.github.io/2017/08/13/ASUS-Temporary-NAS-External-HDD/"/>
     <id>http://khackskjs.github.io/2017/08/13/ASUS-Temporary-NAS-External-HDD/</id>
     <published>2017-08-13T12:59:55.000Z</published>
-    <updated>2017-08-17T13:53:00.000Z</updated>
+    <updated>2017-08-17T15:17:00.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="ASUS-RT-N65U-간이-NAS-사용하기"><a href="#ASUS-RT-N65U-간이-NAS-사용하기" class="headerlink" title="ASUS RT-N65U 간이 NAS 사용하기"></a>ASUS RT-N65U 간이 NAS 사용하기</h1><p>외장하드를 RT-N56U에 연결한 상태에서 Router의 설정 페이지에서 <strong>USB storage device is not responding</strong> 이란 문구가 뜨면서 <code>Media Server</code>도 설치를 할 수 없는 경우가 있다.<br>이럴 경우 외장하드를 ext3로 format 한 후 설정하면 간이 NAS를 구성 할 수 있다.</p>
 <blockquote>
@@ -67,7 +67,7 @@
     <link href="http://khackskjs.github.io/2017/06/30/hexo-markdown-syntax/"/>
     <id>http://khackskjs.github.io/2017/06/30/hexo-markdown-syntax/</id>
     <published>2017-06-30T14:13:04.000Z</published>
-    <updated>2017-08-17T13:48:06.000Z</updated>
+    <updated>2017-08-17T14:06:00.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="유용한-markdown-문법"><a href="#유용한-markdown-문법" class="headerlink" title="유용한 markdown 문법"></a>유용한 markdown 문법</h1><h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 3 backticks</span></div><div class="line"><span class="string">''</span><span class="string">'[language] [title] [url] [link text]</span></div><div class="line">code snippet</div><div class="line">'<span class="string">''</span></div></pre></td></tr></table></figure>
 <h2 id="YouTube"><a href="#YouTube" class="headerlink" title="YouTube"></a>YouTube</h2><p>video_id: 유튜브에서 공유를 누른 후 나오는 URL</p>
