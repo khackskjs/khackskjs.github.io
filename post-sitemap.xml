@@ -7,8 +7,16 @@
     </url>
 
     <url>
+        <loc>http://khackskjs.github.io/2017/09/02/Angular-Restaurant-Demo-App-Routing-Http/</loc>
+        <lastmod>2017-09-16T16:15:50.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://khackskjs.github.io/2017/08/26/Angular-Get-Started/</loc>
-        <lastmod>2017-08-27T13:45:29.000Z</lastmod>
+        <lastmod>2017-08-27T14:06:30.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Angular Restaurant Demo App(Routing, Http) | sVeloper&#39;s</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="" />
+    
+    <meta name="description" content="Routing과 Http Module을 이용해서 Restaurant App을 만들어 보도록 하자. 사람마다 배우는 스타일이 다를거라고 생각한다. (개인적으로 나는 이론적인 부분을 깊에 파고 들어서 이해를 해야 직성이 풀리는 스타일이다)하지만 개발자라면 대부분 코딩 실습을 통해 본인이 해보지 않으면 안다고 or 공부했다고 생각한게 제대로 한게 아니라는건 동의">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Angular Restaurant Demo App(Routing, Http)">
+<meta property="og:url" content="http://khackskjs.github.io/2017/09/02/Angular-Restaurant-Demo-App-Routing-Http/index.html">
+<meta property="og:site_name" content="sVeloper&#39;s">
+<meta property="og:description" content="Routing과 Http Module을 이용해서 Restaurant App을 만들어 보도록 하자. 사람마다 배우는 스타일이 다를거라고 생각한다. (개인적으로 나는 이론적인 부분을 깊에 파고 들어서 이해를 해야 직성이 풀리는 스타일이다)하지만 개발자라면 대부분 코딩 실습을 통해 본인이 해보지 않으면 안다고 or 공부했다고 생각한게 제대로 한게 아니라는건 동의">
+<meta property="og:image" content="https://angular.io/tutorial/toh-pt6#add-the-ability-to-search-by-name">
+<meta property="og:updated_time" content="2017-09-16T16:15:50.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Angular Restaurant Demo App(Routing, Http)">
+<meta name="twitter:description" content="Routing과 Http Module을 이용해서 Restaurant App을 만들어 보도록 하자. 사람마다 배우는 스타일이 다를거라고 생각한다. (개인적으로 나는 이론적인 부분을 깊에 파고 들어서 이해를 해야 직성이 풀리는 스타일이다)하지만 개발자라면 대부분 코딩 실습을 통해 본인이 해보지 않으면 안다고 or 공부했다고 생각한게 제대로 한게 아니라는건 동의">
+<meta name="twitter:image" content="https://angular.io/tutorial/toh-pt6#add-the-ability-to-search-by-name">
+    
+    <link rel="canonical" href="http://khackskjs.github.io/2017/09/02/Angular-Restaurant-Demo-App-Routing-Http/"/>
+
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-102607458-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">철인 뛰는 개발자</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Blog/">Blog</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Blog/Hexo/">Hexo</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/blog/">blog</a></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    uncategorized
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-Angular-Restaurant-Demo-App-Routing-Http" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Angular Restaurant Demo App(Routing, Http)
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/09/02/Angular-Restaurant-Demo-App-Routing-Http/" class="article-date">
+            <time datetime="2017-09-02T12:29:40.000Z" itemprop="datePublished">2017-09-02</time>
+        </a>
+    </div>
+
+                
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p><code>Routing</code>과 <code>Http</code> Module을 이용해서 Restaurant App을 만들어 보도록 하자.</p>
+<p>사람마다 배우는 스타일이 다를거라고 생각한다. (개인적으로 나는 이론적인 부분을 깊에 파고 들어서 이해를 해야 직성이 풀리는 스타일이다)<br>하지만 개발자라면 대부분 코딩 실습을 통해 본인이 해보지 않으면 안다고 or 공부했다고 생각한게 제대로 한게 아니라는건 동의 하지 않을까 추측해 본다.</p>
+<p>이에 Angular의 Routing, Http 를 학습 한 김에 간단한 App을 제작 해 보기로 한다.</p>
+<h1 id="Angular-Routing-Http-실습-Restaurant-App"><a href="#Angular-Routing-Http-실습-Restaurant-App" class="headerlink" title="Angular Routing, Http 실습: Restaurant App"></a>Angular Routing, Http 실습: Restaurant App</h1><h2 id="App"><a href="#App" class="headerlink" title="App"></a>App</h2><p>App은 3개의 탭으로 구성되어 있다. Home, Menu Category, About Us<br>각각의 탭은 <code>Route</code>로 구현한다.</p>
+<p><strong>Menu Category</strong> 탭에서 메뉴 종류를 선택한 후 메뉴 상세를 볼 수 있다.<br>Menu Category List 및 메뉴 상세는 <code>HTTP</code>를 통해 정적 데이터를 로드한 후 보여준다.</p>
+<p>Angular를 얕게 공부 한 후 처음으로 만들어 보기 딱 좋은 App 이라 생각한다.</p>
+<h2 id="구조-생성"><a href="#구조-생성" class="headerlink" title="구조 생성"></a>구조 생성</h2><h3 id="Project-생성"><a href="#Project-생성" class="headerlink" title="Project 생성"></a>Project 생성</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ ng new RestaurantDemoApp</div><div class="line">installing ng</div><div class="line">  ...</div><div class="line">Project <span class="string">'RestaurantDemoApp'</span> successfully created.</div><div class="line">$ code ./RestaurantDemoApp</div></pre></td></tr></table></figure>
+<h3 id="Component-생성"><a href="#Component-생성" class="headerlink" title="Component 생성"></a>Component 생성</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ ng g component Home</div><div class="line">$ ng g component AboutUs</div><div class="line">$ ng g component MenuCategory</div></pre></td></tr></table></figure>
+<p><code>src/app/</code>아래에 <code>about-us</code>, <code>home</code>, <code>menu-category</code> folder가 생긴것을 확인 할 수 있다.<br><code>src/app/app.module.ts</code>를 확인 해 보면 아래와 같은 내용이 추가 된 것을 확인 할 수 있다.</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; AboutUsComponent &#125; <span class="keyword">from</span> <span class="string">'./about-us/about-us.component'</span>;</div><div class="line"><span class="keyword">import</span> &#123; HomeComponent &#125; <span class="keyword">from</span> <span class="string">'./home/home.component'</span>;</div><div class="line"><span class="keyword">import</span> &#123; MenuCategoryComponent &#125; <span class="keyword">from</span> <span class="string">'./menu-category/menu-category.component'</span>;</div><div class="line"></div><div class="line"><span class="meta">@NgModule</span>(&#123;</div><div class="line">  declarations: [</div><div class="line">    AppComponent,</div><div class="line">    AboutUsComponent,</div><div class="line">    HomeComponent,</div><div class="line">    MenuCategoryComponent,</div><div class="line">  ],</div></pre></td></tr></table></figure>
+<h3 id="Router"><a href="#Router" class="headerlink" title="Router"></a>Router</h3><h4 id="Router-Module-App에-추가"><a href="#Router-Module-App에-추가" class="headerlink" title="Router Module App에 추가"></a>Router Module App에 추가</h4><figure class="highlight ts"><figcaption><span>app.module.ts</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; RouterModule, Routes &#125; <span class="keyword">from</span> <span class="string">"@angular/router"</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> restaurantRoutes: Routes = [</div><div class="line">  &#123; path: <span class="string">'home'</span>, component: HomeComponent &#125;,</div><div class="line">  &#123; path: <span class="string">'aboutUs'</span>, component: AboutUsComponent &#125;,</div><div class="line">  &#123; path: <span class="string">'menu-category'</span>, component: MenuCategoryComponent &#125;</div><div class="line">];</div><div class="line"></div><div class="line"><span class="meta">@NgModule</span>(&#123;</div><div class="line">  imports: [</div><div class="line">    RouterModule.forRoot(restaurantRoutes)</div><div class="line">  ]</div></pre></td></tr></table></figure>
+<p><strong>1 Line</strong>: Router를 사용하기 위한 모듈들을 import<br><strong>3~7 Lines</strong>: Restaurant App에서 사용할 route path와 그에따른 component 지정<br><strong>12 Line</strong>: Router를 생성하는 public static method를 이용해서 Router를 생성한다.</p>
+<p>이제 우리 앱에서 라우터를 사용 할 수 있다.</p>
+<p>간단히 Text 형태로 <code>Routing</code> 을 구현하도록 하겠다.</p>
+<h4 id="Navigation-만들기"><a href="#Navigation-만들기" class="headerlink" title="Navigation 만들기"></a>Navigation 만들기</h4><figure class="highlight html"><figcaption><span>app.component.html</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> [<span class="attr">routerLink</span>]=<span class="string">"['/home']"</span>&gt;</span>HOME<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> [<span class="attr">routerLink</span>]=<span class="string">"['/menu-category']"</span>&gt;</span>MENU CATEGORY<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> [<span class="attr">routerLink</span>]=<span class="string">"['/aboutUs']"</span>&gt;</span>ABOUT US<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">router-outlet</span>&gt;</span><span class="tag">&lt;/<span class="name">router-outlet</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><code>ng new {project name}</code>에 의해 생성되는 기본 <code>Component</code>인 app.component의 기존 코드는 모두 제거하고, 위의 코드를 넣는다.</p>
+<p><strong>2 Line</strong>: <strong>one-time binding</strong>을 위해 <code>[]</code>로 감싼 <code>[routerLink]</code>에 <code>RouterModule.forRoot()</code>에 파라미터로 전달한 주소중 하나인 <code>home</code>을 넘긴다.<br><code>routerLink</code>에 할당하는 값은 <code>string Array</code>이다. (2번째 인자값은 parameter)</p>
+<p><code>Home</code>, <code>MenuCategory</code>, <code>AboutUs</code>는  <code>ng</code>를 이용해 <code>Component</code>를 만들었기 때문에, 각 <strong>Component.html</strong> 파일에 <code>&lt;p&gt;about-us works!&lt;/p&gt;</code> 다음과 같이 작성이 되어 있다.</p>
+<p>이제 실행을 시킨 후 웹 브라우저로 확인하면 Routing 된 페이지를 확인 할 수 있다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ ng serve</div><div class="line">** NG Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200 **</div><div class="line"><span class="comment">#(중략)</span></div><div class="line">webpack: Compiled successfully.</div></pre></td></tr></table></figure>
+<h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><p>HTTP Module 사용은 조금 더 복잡한 면이 있어서, 이번 예제에서는 Data Model 객체는 사용하지 않는다.</p>
+<h4 id="HTTP-Module-App에-추가"><a href="#HTTP-Module-App에-추가" class="headerlink" title="HTTP Module App에 추가"></a>HTTP Module App에 추가</h4><figure class="highlight ts"><figcaption><span>app.module.ts</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; HttpModule, Http &#125; <span class="keyword">from</span> <span class="string">"@angular/http"</span>;</div><div class="line"></div><div class="line"><span class="meta">@NgModule</span>(&#123;</div><div class="line">  imports: [</div><div class="line">    HttpModule</div><div class="line">  ]</div></pre></td></tr></table></figure>
+<h4 id="Service-만들기"><a href="#Service-만들기" class="headerlink" title="Service 만들기"></a>Service 만들기</h4><p><code>HTTP</code>를 사용해서 Data를 처리할 <code>Service</code>를 만들고, <code>NgModule.providers</code>에 등록한다.</p>
+<figure class="highlight ts"><figcaption><span>src/app/menu-category/menu-category.service.ts</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Injectable &#125; <span class="keyword">from</span> <span class="string">"@angular/core"</span>;</div><div class="line"><span class="keyword">import</span> &#123; Http &#125; <span class="keyword">from</span> <span class="string">"@angular/http"</span>;</div><div class="line"></div><div class="line"><span class="keyword">import</span> &#123; Observable &#125; <span class="keyword">from</span> <span class="string">'rxjs/Observable'</span>;</div><div class="line"><span class="keyword">import</span> <span class="string">'rxjs/add/operator/map'</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> CATEGORY_MENU_URL = <span class="string">"https://khackskjs-course5.herokuapp.com/categories.json"</span>;</div><div class="line"></div><div class="line"><span class="meta">@Injectable</span>()</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> CategoryService &#123;</div><div class="line">    <span class="keyword">constructor</span>(<span class="params"><span class="keyword">private</span> http: Http</span>) &#123;&#125;</div><div class="line"></div><div class="line">    getCategories(): Observable&lt;<span class="built_in">any</span>&gt; &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.http.get(CATEGORY_MENU_URL)</div><div class="line">        .map(<span class="function"><span class="params">response</span> =&gt;</span> response.json());</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight ts"><figcaption><span>src/app/app.module.ts</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; CategoryService &#125; <span class="keyword">from</span> <span class="string">'./menu-category/menu-category.service'</span>;</div><div class="line"></div><div class="line"><span class="meta">@NgModule</span>(&#123;</div><div class="line">  providers: [CategoryService]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h4 id="Component-만들기"><a href="#Component-만들기" class="headerlink" title="Component 만들기"></a>Component 만들기</h4><p>Data를 가져오는 <code>Service</code>를 만들었다면, 이제 <code>Service</code>를 사용하는 <code>Component</code>를 만든다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ng g component menuCategory</div></pre></td></tr></table></figure>
+<figure class="highlight ts"><figcaption><span>src/app/menu-category/menu-category.component.ts</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Component, OnInit &#125; <span class="keyword">from</span> <span class="string">'@angular/core'</span>;</div><div class="line"><span class="keyword">import</span> &#123; CategoryService &#125; <span class="keyword">from</span> <span class="string">"./menu-category.service"</span>;</div><div class="line"></div><div class="line"><span class="meta">@Component</span>(&#123;</div><div class="line">  selector: <span class="string">'app-menu-category'</span>,</div><div class="line">  templateUrl: <span class="string">'./menu-category.component.html'</span>,</div><div class="line">  styleUrls: [<span class="string">'./menu-category.component.css'</span>]</div><div class="line">&#125;)</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> MenuCategoryComponent <span class="keyword">implements</span> OnInit &#123;</div><div class="line">  categoryList: <span class="built_in">any</span>[];</div><div class="line">  <span class="keyword">constructor</span>(<span class="params"><span class="keyword">private</span> categoryService: CategoryService</span>) &#123;&#125;</div><div class="line"></div><div class="line">  ngOnInit() &#123;</div><div class="line">    <span class="keyword">this</span>.categoryService.getCategories()</div><div class="line">    .subscribe(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</div><div class="line">      <span class="keyword">this</span>.categoryList = res;</div><div class="line">    &#125;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight html"><figcaption><span>src/app/menu-category/menu-category.component.html</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">thead</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>Category Name<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">tbody</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span> *<span class="attr">ngFor</span>=<span class="string">"let category of categoryList"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span> &#123;&#123; category.name &#125;&#125;<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h3><p><code>Router</code>와 <code>Http</code>를 사용해서 간단한 web App을 구현 해 봤다.</p>
+<p><code>Router</code>와 <code>Http</code>를 사용하기 위해서 어떤 일련의 과정을 해야 하는지를 중점적으로 보기 바란다.</p>
+<p><img src="https://angular.io/tutorial/toh-pt6#add-the-ability-to-search-by-name" alt="Http Obserable"></p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://khackskjs.github.io/2017/09/02/Angular-Restaurant-Demo-App-Routing-Http/" data-id="cj73hsc0j000ftb9om69pmns8" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="/" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="/" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/khackskjs" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2017/08/26/Angular-Get-Started/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Angular Get Started</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2017/09/02/Angular-Restaurant-Demo-App-Routing-Http/" class="title">Angular Restaurant Demo App(Routing, Http)</a></p>
+                            <p class="item-date"><time datetime="2017-09-02T12:29:40.000Z" itemprop="datePublished">2017-09-02</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2017/08/26/Angular-Get-Started/" class="title">Angular Get Started</a></p>
+                            <p class="item-date"><time datetime="2017-08-25T20:12:34.000Z" itemprop="datePublished">2017-08-26</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2017/08/19/Angular-Routing/" class="title">Angular Routing</a></p>
+                            <p class="item-date"><time datetime="2017-08-19T08:34:18.000Z" itemprop="datePublished">2017-08-19</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2017/08/13/ASUS-Temporary-NAS-External-HDD/" class="title">ASUS(RT-N56U) 간이 NAS 설정 (ext3)</a></p>
+                            <p class="item-date"><time datetime="2017-08-13T12:59:55.000Z" itemprop="datePublished">2017-08-13</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/blog/">blog</a></p>
+                            <p class="item-title"><a href="/2017/06/30/hexo-markdown-syntax/" class="title">hexo, markdown syntax</a></p>
+                            <p class="item-date"><time datetime="2017-06-30T14:13:04.000Z" itemprop="datePublished">2017-06-30</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/Hexo/">Hexo</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><span class="category-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">4</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ASUS/">ASUS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Angular/">Angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Environment/">Environment</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Follow-me/">Follow me</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NAS/">NAS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RT-N56U/">RT-N56U</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Routing/">Routing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ext3/">ext3</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ground-rule/">ground rule</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tip/">tip</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/ASUS/" style="font-size: 10px;">ASUS</a> <a href="/tags/Angular/" style="font-size: 10px;">Angular</a> <a href="/tags/Environment/" style="font-size: 10px;">Environment</a> <a href="/tags/Follow-me/" style="font-size: 10px;">Follow me</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/NAS/" style="font-size: 10px;">NAS</a> <a href="/tags/RT-N56U/" style="font-size: 10px;">RT-N56U</a> <a href="/tags/Routing/" style="font-size: 10px;">Routing</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/ext3/" style="font-size: 10px;">ext3</a> <a href="/tags/ground-rule/" style="font-size: 10px;">ground rule</a> <a href="/tags/tip/" style="font-size: 10px;">tip</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 Robert Kim</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://khackskjs.github.io/2017/09/02/Angular-Restaurant-Demo-App-Routing-Http/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
