@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://khackskjs.github.io/2017/11/26/normalize-example/</loc>
+        <lastmod>2017-11-26T14:26:40.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://khackskjs.github.io/2017/09/02/Angular-Restaurant-Demo-App-Routing-Http/</loc>
         <lastmod>2017-09-16T16:15:50.000Z</lastmod>
         <changefreq>weekly</changefreq>
