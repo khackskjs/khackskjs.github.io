@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://khackskjs.github.io/2017/11/26/normalize-example/index.html">
 <meta property="og:site_name" content="sVeloper&#39;s">
 <meta property="og:description" content="1. Normalizrnarmalizr 사용법을 익혀 본다. 1.1. 목차  1. Normalizr 1.1. 목차 Definition 1.2.1. Motivation 1.2.2. Solution   1.3. Execution of normalizr 1.3.1. Environment 1.3.1.1. Project init 1.3.1.2. babel &amp;amp;">
-<meta property="og:updated_time" content="2017-11-26T14:26:40.000Z">
+<meta property="og:updated_time" content="2017-12-03T15:01:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="normalize example">
 <meta name="twitter:description" content="1. Normalizrnarmalizr 사용법을 익혀 본다. 1.1. 목차  1. Normalizr 1.1. 목차 Definition 1.2.1. Motivation 1.2.2. Solution   1.3. Execution of normalizr 1.3.1. Environment 1.3.1.1. Project init 1.3.1.2. babel &amp;amp;">
@@ -81,7 +81,7 @@ ga('send', 'pageview');
                                     <a class="main-nav-list-link" href="/">Inici</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Blog/">Blog</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Blog/Hexo/">Hexo</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/blog/">blog</a></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Blog/">Blog</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Blog/Hexo/">Hexo</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/angular/">angular</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/blog/">blog</a></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/about/index.html">Quant a</a>
@@ -198,12 +198,13 @@ ga('send', 'pageview');
 </ul>
 </li>
 <li><a href="#14-into-the-normalizr">1.4. Into the Normalizr</a><ul>
-<li><a href="#141-term-definitions">1.4.1. Term Definitions</a><ul>
-<li><a href="#1411-normalize-function">1.4.1.1. normalize function</a></li>
+<li><a href="#normalize-function">normalize function</a><ul>
+<li><a href="#example-of-normalize-function">example of normalize function</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li><a href="#dive-into-the-normalizr">Dive into the normalizr</a></li>
 <li><a href="#15-references">1.5. references</a></li>
 </ul>
 </li>
@@ -245,10 +246,44 @@ ga('send', 'pageview');
 <h3 id="1-3-3-Run"><a href="#1-3-3-Run" class="headerlink" title="1.3.3. Run"></a>1.3.3. Run</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; babel-node index.js</div></pre></td></tr></table></figure>
 <h3 id="1-3-4-Result"><a href="#1-3-4-Result" class="headerlink" title="1.3.4. Result"></a>1.3.4. Result</h3><p><code>output.json</code> 파일이 생성되며, 결과는 다음과 같다.</p>
 <figure class="highlight json"><figcaption><span>./output.json</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"entities"</span>: &#123;</div><div class="line">    <span class="attr">"users"</span>: &#123;</div><div class="line">      <span class="attr">"123"</span>: &#123;</div><div class="line">        <span class="attr">"id"</span>: <span class="string">"123"</span>,</div><div class="line">        <span class="attr">"name"</span>: <span class="string">"Paul"</span>,</div><div class="line">        <span class="attr">"posts"</span>: [</div><div class="line">          <span class="string">"1"</span>,</div><div class="line">          <span class="string">"2"</span></div><div class="line">        ],</div><div class="line">        <span class="attr">"comments"</span>: [</div><div class="line">          <span class="string">"250"</span></div><div class="line">        ]</div><div class="line">      &#125;,</div><div class="line">      <span class="attr">"245"</span>: &#123;</div><div class="line">        <span class="attr">"id"</span>: <span class="string">"245"</span>,</div><div class="line">        <span class="attr">"name"</span>: <span class="string">"Jane"</span>,</div><div class="line">        <span class="attr">"comments"</span>: [</div><div class="line">          <span class="string">"249"</span>,</div><div class="line">          <span class="string">"251"</span></div><div class="line">        ],</div><div class="line">        <span class="attr">"posts"</span>: []</div><div class="line">      &#125;,</div><div class="line">      <span class="attr">"246"</span>: &#123;</div><div class="line">        <span class="attr">"id"</span>: <span class="string">"246"</span>,</div><div class="line">        <span class="attr">"name"</span>: <span class="string">"Spambot5000"</span>,</div><div class="line">        <span class="attr">"comments"</span>: [</div><div class="line">          <span class="string">"252"</span></div><div class="line">        ]</div><div class="line">      &#125;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">"comments"</span>: &#123;</div><div class="line">      <span class="attr">"249"</span>: &#123;</div><div class="line">        <span class="attr">"id"</span>: <span class="string">"249"</span>,</div><div class="line">        <span class="attr">"content"</span>: <span class="string">"Nice post!"</span>,</div><div class="line">        <span class="attr">"commenter"</span>: <span class="string">"245"</span>,</div><div class="line">        <span class="attr">"post"</span>: <span class="string">"1"</span></div><div class="line">      &#125;,</div><div class="line">      <span class="attr">"250"</span>: &#123;</div><div class="line">        <span class="attr">"id"</span>: <span class="string">"250"</span>,</div><div class="line">        <span class="attr">"content"</span>: <span class="string">"Thanks!"</span>,</div><div class="line">        <span class="attr">"commenter"</span>: <span class="string">"123"</span>,</div><div class="line">        <span class="attr">"post"</span>: <span class="string">"1"</span></div><div class="line">      &#125;,</div><div class="line">      <span class="attr">"251"</span>: &#123;</div><div class="line">        <span class="attr">"id"</span>: <span class="string">"251"</span>,</div><div class="line">        <span class="attr">"content"</span>: <span class="string">"Your other post was nicer"</span>,</div><div class="line">        <span class="attr">"commenter"</span>: <span class="string">"245"</span>,</div><div class="line">        <span class="attr">"post"</span>: <span class="string">"2"</span></div><div class="line">      &#125;,</div><div class="line">      <span class="attr">"252"</span>: &#123;</div><div class="line">        <span class="attr">"id"</span>: <span class="string">"252"</span>,</div><div class="line">        <span class="attr">"content"</span>: <span class="string">"I am a spammer!"</span>,</div><div class="line">        <span class="attr">"commenter"</span>: <span class="string">"246"</span>,</div><div class="line">        <span class="attr">"post"</span>: <span class="string">"2"</span></div><div class="line">      &#125;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">"posts"</span>: &#123;</div><div class="line">      <span class="attr">"1"</span>: &#123;</div><div class="line">        <span class="attr">"id"</span>: <span class="string">"1"</span>,</div><div class="line">        <span class="attr">"title"</span>: <span class="string">"My first post!"</span>,</div><div class="line">        <span class="attr">"author"</span>: <span class="string">"123"</span>,</div><div class="line">        <span class="attr">"comments"</span>: [</div><div class="line">          <span class="string">"249"</span>,</div><div class="line">          <span class="string">"250"</span></div><div class="line">        ]</div><div class="line">      &#125;,</div><div class="line">      <span class="attr">"2"</span>: &#123;</div><div class="line">        <span class="attr">"id"</span>: <span class="string">"2"</span>,</div><div class="line">        <span class="attr">"title"</span>: <span class="string">"This other post"</span>,</div><div class="line">        <span class="attr">"author"</span>: <span class="string">"123"</span>,</div><div class="line">        <span class="attr">"comments"</span>: [</div><div class="line">          <span class="string">"251"</span>,</div><div class="line">          <span class="string">"252"</span></div><div class="line">        ]</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"result"</span>: [</div><div class="line">    <span class="string">"1"</span>,</div><div class="line">    <span class="string">"2"</span></div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="1-4-Into-the-Normalizr"><a href="#1-4-Into-the-Normalizr" class="headerlink" title="1.4. Into the Normalizr"></a>1.4. Into the Normalizr</h2><h3 id="1-4-1-Term-Definitions"><a href="#1-4-1-Term-Definitions" class="headerlink" title="1.4.1. Term Definitions"></a>1.4.1. Term Definitions</h3><p><code>Entity</code>: 실재, 존재<br><code>Schema</code>: 도식</p>
-<h4 id="1-4-1-1-normalize-function"><a href="#1-4-1-1-normalize-function" class="headerlink" title="1.4.1.1. normalize function"></a>1.4.1.1. normalize function</h4><p><code>normalize</code> function은 다음과 같이 선언되어 있다.</p>
-<figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">normalize</span>(<span class="params">data: <span class="built_in">any</span>, schema: Schema</span>): </span>&#123; entities: <span class="built_in">any</span>, result: <span class="built_in">any</span> &#125;;</div><div class="line"></div><div class="line"><span class="keyword">type</span> Schema = schema.Array | schema.Entity |</div><div class="line">  schema.Object | schema.Union | schema.Values |</div><div class="line">  schema.Array[] | schema.Entity[] | schema.Object[] |</div><div class="line">  schema.Union[] | schema.Values[] | &#123;[key: <span class="built_in">string</span>]: Schema&#125;;</div></pre></td></tr></table></figure>
-<p><code>normalize</code> function을 사용하기 위해서는 normalize 할 원본 데이터(<code>JSON</code> or plain JS object)와, 해당 원본 데이터의 schema를 parameter로 전달하면 된다.</p>
+<h2 id="1-4-Into-the-Normalizr"><a href="#1-4-Into-the-Normalizr" class="headerlink" title="1.4. Into the Normalizr"></a>1.4. Into the Normalizr</h2><p><code>normalizr</code> interface 부분을 간략히 살펴본 후 예제를 통해서 사용법을 익혀본다.</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">declare</span> <span class="keyword">namespace</span> schema &#123;</div><div class="line">  <span class="comment">// 중략</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">type</span> Schema = schema.Array | schema.Entity |</div><div class="line">  schema.Object | schema.Union | schema.Values |</div><div class="line">  schema.Array[] | schema.Entity[] | schema.Object[] |</div><div class="line">  schema.Union[] | schema.Values[] | &#123;[key: <span class="built_in">string</span>]: Schema&#125;;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">normalize</span>(<span class="params">data: <span class="built_in">any</span>, schema: Schema</span>)</span></div><div class="line">  : &#123; entities: <span class="built_in">any</span>, result: <span class="built_in">any</span> &#125;;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">denormalize</span>(<span class="params">input: <span class="built_in">any</span>, schema: Schema, entities: <span class="built_in">any</span></span>)</span></div><div class="line">  : <span class="title">any</span>;</div></pre></td></tr></table></figure>
+<h3 id="normalize-function"><a href="#normalize-function" class="headerlink" title="normalize function"></a>normalize function</h3><p><code>normalize(data: any, schema: Schema): { entities: any, result: any }</code></p>
+<blockquote>
+<p>Normalizes input data per the schema definition provided.</p>
+<ul>
+<li>data: required Input JSON (or plain JS object) data that needs normalization.</li>
+<li>schema: required A schema definition</li>
+</ul>
+</blockquote>
+<p><a href="https://github.com/paularmstrong/normalizr/blob/master/docs/api.md#normalizedata-schema" target="_blank" rel="external">GitHub</a>에서 <code>normalize function</code>을 위와같이 설명하고 있다. <del>그렇다고 한다-ㅅ-</del></p>
+<p><code>normalize function</code>을 사용하기 위해서는 normalize 할 원본 데이터(<code>JSON</code> or plain JS object)와, 해당 원본 데이터의 schema를 정의한 <code>Scmhema</code>를 parameter로 전달해야 한다.</p>
+<blockquote>
+<p><code>export type Schema =</code>를 이루는 항목들을 보면 알 수 있듯 <code>Schema</code>는 모두 <code>namespace schema</code>를 이용해서 만들어야 한다.<br>그리고 보통 <code>schema.Entity</code>, <code>schema.Array</code> 그리고 <code>{[key: string]: Schema}</code>를 사용 할 것으로 보인다.</p>
+</blockquote>
+<p>무슨 말인고 하니, input data가 어떻게 이루어져 있는지를 정의하고, 필요에 따라서는 몇가지 옵션을 통해서 Entity를 만져주면 된다.</p>
+<h4 id="example-of-normalize-function"><a href="#example-of-normalize-function" class="headerlink" title="example of normalize function"></a>example of normalize function</h4><p>input data의 구조를 분해해서 <code>Entity</code>, <code>Schema</code> 를 작성하면 된다.</p>
+<figure class="highlight ts"><figcaption><span>demo/01.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; normalize, schema &#125; <span class="keyword">from</span> <span class="string">'normalizr'</span>;</div><div class="line"><span class="keyword">const</span> input = &#123; books: [&#123; id: <span class="number">1</span>, title: <span class="string">'rework'</span> &#125;, &#123; id: <span class="number">2</span>, title: <span class="string">'대한민국이 묻는다'</span>&#125;] &#125;,</div><div class="line">  book = <span class="keyword">new</span> schema.Entity(<span class="string">'book'</span>),</div><div class="line">  bookSchema = &#123; books: [book] &#125;,</div><div class="line">  normalized = normalize(input, bookSchema);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">require</span>(<span class="string">'util'</span>).inspect(normalized, &#123; depth: <span class="literal">null</span> &#125;));</div></pre></td></tr></table></figure>
+<p>우리의 관심사는 book 이라는 Entity에 들어있는 값 들이다.<br>하지만 input data에 book은 books 라는 property에 Array 형태로 존재한다.<br>따라서 이를 정리하면 다음과 같다.</p>
+<ol>
+<li><p>input data 는 <code>object</code> 형태로 <strong>books</strong>라는 <code>property</code>에 <code>Array</code>를 가지고 있다.</p>
+<blockquote>
+<p><code>input = { books: [] }</code></p>
+</blockquote>
+</li>
+<li><p>이 <code>Array</code>의 <code>item</code>은 <code>object</code>이며, 이를 <strong>book</strong> 으로 사용 하도록 한다.</p>
+<blockquote>
+<p><code>book = { id: 1, title: &#39;rework&#39; }</code></p>
+</blockquote>
+</li>
+</ol>
+<p>위의 순서에 따라서 정의(line 3, 4) 한 후, <code>normalize function</code>에 전달하면 된다.</p>
+<p>결과는 아래와 같다.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123; entities:</div><div class="line">   &#123; book:</div><div class="line">      &#123; '1': &#123; id: 1, title: 'rework' &#125;,</div><div class="line">        '2': &#123; id: 2, title: '대한민국이 묻는다' &#125; &#125; &#125;,</div><div class="line">  result: &#123; books: [ 1, 2 ] &#125; &#125;</div></pre></td></tr></table></figure>
+<p>아주 심플한 예제는 이정도에서 마치자.</p>
+<h2 id="Dive-into-the-normalizr"><a href="#Dive-into-the-normalizr" class="headerlink" title="Dive into the normalizr"></a>Dive into the normalizr</h2><p>앞서 최초 실행 해 봤던 예제에 대한 분석.</p>
+<p>To be continue..</p>
+<p>processStrategy(value, parent, key): Strategy to use when pre-processing the entity.<br>    Use this method to add extra data, defaults, and/or completely change the entity before normalization is complete.<br>    Defaults to returning a shallow copy of the input entity.<br>        Note: It is recommended to always return a copy of your input and not modify the original.<br>            The function accepts the following arguments, in order:<br>        value: The input value of the entity.<br>        parent: The parent object of the input array.<br>        key: The key at which the input array appears on the parent object.</p>
 <h2 id="1-5-references"><a href="#1-5-references" class="headerlink" title="1.5. references"></a>1.5. references</h2><p><a href="https://github.com/paularmstrong/normalizr#normalizr----" target="_blank" rel="external">paularmstrong/normalizr (github)</a></p>
 
         </div>
@@ -257,7 +292,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://khackskjs.github.io/2017/11/26/normalize-example/" data-id="cjagv58xm001fwu9oxt659id9" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://khackskjs.github.io/2017/11/26/normalize-example/" data-id="cjaqk55k9000f6l9o6qupe05i" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -370,6 +405,16 @@ ga('send', 'pageview');
         
 <nav id="article-nav">
     
+        <a href="/2017/11/28/Angular-egghead-01/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">més nou</strong>
+        <p class="article-nav-title">
+        
+            Angular - egghead 01
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
     
         <a href="/2017/09/02/Angular-Restaurant-Demo-App-Routing-Http/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">antic</strong>
@@ -388,6 +433,15 @@ ga('send', 'pageview');
         <h3 class="widget-title">recents</h3>
         <div class="widget">
             <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/angular/">angular</a></p>
+                            <p class="item-title"><a href="/2017/11/28/Angular-egghead-01/" class="title">Angular - egghead 01</a></p>
+                            <p class="item-date"><time datetime="2017-11-27T15:18:40.000Z" itemprop="datePublished">2017-11-28</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -425,15 +479,6 @@ ga('send', 'pageview');
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2017/08/13/ASUS-Temporary-NAS-External-HDD/" class="title">ASUS(RT-N56U) 간이 NAS 설정 (ext3)</a></p>
-                            <p class="item-date"><time datetime="2017-08-13T12:59:55.000Z" itemprop="datePublished">2017-08-13</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -443,7 +488,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/Hexo/">Hexo</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/Hexo/">Hexo</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/angular/">angular</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -453,7 +498,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">arxius</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">4</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">4</span></li></ul>
         </div>
     </div>
 
@@ -463,7 +508,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">etiquetes</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ASUS/">ASUS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Angular/">Angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Environment/">Environment</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Follow-me/">Follow me</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NAS/">NAS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RT-N56U/">RT-N56U</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Routing/">Routing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/babel/">babel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/babel-node/">babel-node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ext3/">ext3</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ground-rule/">ground rule</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/normalizr/">normalizr</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tip/">tip</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ASUS/">ASUS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Angular/">Angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Environment/">Environment</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Follow-me/">Follow me</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NAS/">NAS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RT-N56U/">RT-N56U</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Routing/">Routing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/">angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/babel/">babel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/babel-node/">babel-node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/egghead/">egghead</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ext3/">ext3</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ground-rule/">ground rule</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/normalizr/">normalizr</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tip/">tip</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -473,7 +518,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">etiqueta cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/ASUS/" style="font-size: 10px;">ASUS</a> <a href="/tags/Angular/" style="font-size: 10px;">Angular</a> <a href="/tags/Environment/" style="font-size: 10px;">Environment</a> <a href="/tags/Follow-me/" style="font-size: 10px;">Follow me</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/NAS/" style="font-size: 10px;">NAS</a> <a href="/tags/RT-N56U/" style="font-size: 10px;">RT-N56U</a> <a href="/tags/Routing/" style="font-size: 10px;">Routing</a> <a href="/tags/babel/" style="font-size: 10px;">babel</a> <a href="/tags/babel-node/" style="font-size: 10px;">babel-node</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/ext3/" style="font-size: 10px;">ext3</a> <a href="/tags/ground-rule/" style="font-size: 10px;">ground rule</a> <a href="/tags/normalizr/" style="font-size: 10px;">normalizr</a> <a href="/tags/tip/" style="font-size: 10px;">tip</a>
+            <a href="/tags/ASUS/" style="font-size: 10px;">ASUS</a> <a href="/tags/Angular/" style="font-size: 10px;">Angular</a> <a href="/tags/Environment/" style="font-size: 10px;">Environment</a> <a href="/tags/Follow-me/" style="font-size: 10px;">Follow me</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/NAS/" style="font-size: 10px;">NAS</a> <a href="/tags/RT-N56U/" style="font-size: 10px;">RT-N56U</a> <a href="/tags/Routing/" style="font-size: 10px;">Routing</a> <a href="/tags/angular/" style="font-size: 10px;">angular</a> <a href="/tags/babel/" style="font-size: 10px;">babel</a> <a href="/tags/babel-node/" style="font-size: 10px;">babel-node</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/egghead/" style="font-size: 10px;">egghead</a> <a href="/tags/ext3/" style="font-size: 10px;">ext3</a> <a href="/tags/ground-rule/" style="font-size: 10px;">ground rule</a> <a href="/tags/normalizr/" style="font-size: 10px;">normalizr</a> <a href="/tags/tip/" style="font-size: 10px;">tip</a>
         </div>
     </div>
 
