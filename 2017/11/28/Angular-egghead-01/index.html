@@ -8,17 +8,17 @@
     
         <meta name="keywords" content="angular,egghead" />
     
-    <meta name="description" content="Angular Get Started1234$ ng new angular2-fundamentals$ ng generate component simple-form --inline-template --inline-style# same as$ ng g c simple-form -it -is .angular-cli.json file 에 prefix 값이 seleco">
+    <meta name="description" content="[Egg Head] Angular Get StartedEgg Head의 Get Started with Angular를 강의 순서대로 남겨 둘만한 부분에 대해서 간단히 정리 해 본다. 2. Create a Simple Angular 2 Component123$ ng generate component simple-form --inline-template --i">
 <meta name="keywords" content="angular,egghead">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Angular - egghead 01">
 <meta property="og:url" content="http://khackskjs.github.io/2017/11/28/Angular-egghead-01/index.html">
 <meta property="og:site_name" content="sVeloper&#39;s">
-<meta property="og:description" content="Angular Get Started1234$ ng new angular2-fundamentals$ ng generate component simple-form --inline-template --inline-style# same as$ ng g c simple-form -it -is .angular-cli.json file 에 prefix 값이 seleco">
-<meta property="og:updated_time" content="2017-12-01T16:57:47.000Z">
+<meta property="og:description" content="[Egg Head] Angular Get StartedEgg Head의 Get Started with Angular를 강의 순서대로 남겨 둘만한 부분에 대해서 간단히 정리 해 본다. 2. Create a Simple Angular 2 Component123$ ng generate component simple-form --inline-template --i">
+<meta property="og:updated_time" content="2017-12-10T12:50:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Angular - egghead 01">
-<meta name="twitter:description" content="Angular Get Started1234$ ng new angular2-fundamentals$ ng generate component simple-form --inline-template --inline-style# same as$ ng g c simple-form -it -is .angular-cli.json file 에 prefix 값이 seleco">
+<meta name="twitter:description" content="[Egg Head] Angular Get StartedEgg Head의 Get Started with Angular를 강의 순서대로 남겨 둘만한 부분에 대해서 간단히 정리 해 본다. 2. Create a Simple Angular 2 Component123$ ng generate component simple-form --inline-template --i">
     
     <link rel="canonical" href="http://khackskjs.github.io/2017/11/28/Angular-egghead-01/"/>
 
@@ -176,26 +176,73 @@ ga('send', 'pageview');
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="Angular-Get-Started"><a href="#Angular-Get-Started" class="headerlink" title="Angular Get Started"></a>Angular Get Started</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ ng new angular2-fundamentals</div><div class="line">$ ng generate component simple-form --inline-template --inline-style</div><div class="line"><span class="comment"># same as</span></div><div class="line">$ ng g c simple-form -it -is</div></pre></td></tr></table></figure>
-<p><code>.angular-cli.json</code> file 에 <code>prefix</code> 값이 selecotr의 prefix 로 동작 함</p>
-<h2 id="click-event-amp-input-binding"><a href="#click-event-amp-input-binding" class="headerlink" title="click event &amp; input binding"></a>click event &amp; input binding</h2><p><code>input</code> 으로부터 값을 입력 받아서, <code>click</code> 하면 출력하는 예제를 통해 event binding을 해 본다.</p>
-<figure class="highlight ts"><figcaption><span>./src/app/simple-form/simple-form.component.ts</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Component</span>(&#123;</div><div class="line">  template: <span class="string">`</span></div><div class="line">    &lt;div&gt;</div><div class="line">      &lt;input #myInput type="text"&gt;</div><div class="line">      &lt;button (click)="onClick(myInput)"&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">  `</div><div class="line">&#125;)</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> SimpleFormComponent <span class="keyword">implements</span> OnInit &#123;</div><div class="line">  onClick(value) &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'clicked'</span>, value);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+            <h1 id="Egg-Head-Angular-Get-Started"><a href="#Egg-Head-Angular-Get-Started" class="headerlink" title="[Egg Head] Angular Get Started"></a>[Egg Head] Angular Get Started</h1><p><a href="https://egghead.io" target="_blank" rel="external">Egg Head</a>의 <strong>Get Started with Angular</strong>를 강의 순서대로 <strong>남겨 둘만한 부분</strong>에 대해서 간단히 정리 해 본다.</p>
+<h2 id="2-Create-a-Simple-Angular-2-Component"><a href="#2-Create-a-Simple-Angular-2-Component" class="headerlink" title="2. Create a Simple Angular 2 Component"></a>2. Create a Simple Angular 2 Component</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ ng generate component simple-form --inline-template --inline-style</div><div class="line"><span class="comment"># same as</span></div><div class="line">$ ng g c simple-form -it -is</div></pre></td></tr></table></figure>
+<p><code>.angular-cli.json</code> file 에 <code>apps.prefix</code> 값이 <strong>selecotr</strong>의 prefix로 동작 함</p>
+<h2 id="3-Manage-Angular-2-Elements-with-Events-and-Refs"><a href="#3-Manage-Angular-2-Elements-with-Events-and-Refs" class="headerlink" title="3. Manage Angular 2 Elements with Events and Refs"></a>3. Manage Angular 2 Elements with Events and Refs</h2><h3 id="click-event-amp-input-binding"><a href="#click-event-amp-input-binding" class="headerlink" title="click event &amp; input binding"></a>click event &amp; input binding</h3><p><code>input</code> 으로부터 값을 입력 받아서, <code>click</code> 하면 출력하는 예제를 통해 event binding을 해 본다.</p>
+<figure class="highlight ts"><figcaption><span>./src/app/simple-form/simple-form.component.ts</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Component</span>(&#123;</div><div class="line">  template: <span class="string">`</span></div><div class="line">    &lt;div&gt;</div><div class="line">      &lt;input #myInput type="text"&gt;</div><div class="line">      &lt;button (click)="onClick(myInput.value)"&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">  `</div><div class="line">&#125;)</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> SimpleFormComponent <span class="keyword">implements</span> OnInit &#123;</div><div class="line">  onClick(value) &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'clicked'</span>, value);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ol>
-<li><code>DOM event</code>(<code>click</code>) 를 <code>onClick</code> method 와 binding.</li>
-<li>#myInput 은 <strong>reference input</strong> 이라고 하며, Element를 가리키는 듯.</li>
-</ol>
-<blockquote>
-<p>Question<br><strong>#myInput</strong> 의 정체를 조금 더 알 핖요가 있을 듯</p>
+<li><code>DOM event</code>(<code>click</code>)를 <code>onClick</code> method 와 binding.</li>
+<li>#myInput 은 <strong>refs</strong> 라고 하며, Element를 가리키는 듯.<blockquote>
+<p><strong>#myInput</strong> 의 정체를 조금 더 알 핖요가 있을 듯</p>
 </blockquote>
-<p><code>$event</code>를 parameter 로 넘길 수 있다.</p>
-<figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">template: <span class="string">`&lt;div&gt;</span></div><div class="line">  &lt;input #myInput type="text"&gt;</div><div class="line">  &lt;button (click)="onClick($event, myInput.value)"&gt;BTN&lt;/button&gt;</div><div class="line">  &lt;/div&gt;`</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><code>HTML</code>에서 <code>onClick(myInput)</code>으로 value가 아닌 myInput을 전달하게 되면 Element 가 전달된다.</p>
+<blockquote>
+<p><code>console.log(myInput.value)</code> 한 후 CDT &gt; <strong>console</strong>의 출력에 마우스 오버하면 해당 Element를 하이라이트 해 준다.</p>
+</blockquote>
+<h2 id="4-Control-Angular-2-Events-with-event-and-Event-Handlers"><a href="#4-Control-Angular-2-Events-with-event-and-Event-Handlers" class="headerlink" title="4. Control Angular 2 Events with $event and Event Handlers"></a>4. Control Angular 2 Events with $event and Event Handlers</h2><p><code>$event</code>를 parameter 로 넘길 수 있다.</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Component</span>(&#123;</div><div class="line">  template: <span class="string">`&lt;div&gt;</span></div><div class="line">      &lt;input #myInput type="text"&gt;</div><div class="line">      &lt;button (click)="onClick($event, myInput.value)"&gt;BTN&lt;/button&gt;</div><div class="line">    &lt;/div&gt;`</div><div class="line">&#125;)</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> SimpleFormComponent <span class="keyword">implements</span> OnInit &#123;</div><div class="line">  onClick(event, value) &#123;</div><div class="line">    <span class="built_in">console</span>.log(event, value);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="5-Share-Services-and-Data-with-Angular-2-Dependency-Injection"><a href="#5-Share-Services-and-Data-with-Angular-2-Dependency-Injection" class="headerlink" title="5. Share Services and Data with Angular 2 Dependency Injection"></a>5. Share Services and Data with Angular 2 Dependency Injection</h2><ol>
+<li><code>app.module.ts</code>의 providers에 생성한 <code>Service Class</code> 추가<blockquote>
+<p>ex) <code>providers: [MailService]</code></p>
+</blockquote>
+</li>
+<li>사용할 <code>Component</code>의 <code>constructor</code>에 추가<blockquote>
+<p>ex) <code>constructor(private mailService: MailService) {}</code></p>
+</blockquote>
+</li>
+</ol>
+<h2 id="6-Provide-and-Share-Values-with-Angular-2-Dependency-Injection"><a href="#6-Provide-and-Share-Values-with-Angular-2-Dependency-Injection" class="headerlink" title="6. Provide and Share Values with Angular 2 Dependency Injection"></a>6. Provide and Share Values with Angular 2 Dependency Injection</h2><p><code>providers</code>에 <code>object</code>를 통해 이름을 변경해서 <code>DI</code> 해 본다.</p>
+<ol>
+<li><code>app.module.ts</code>의 providers에 <code>{provide: &#39;이름&#39;, useClass: 서비스_클래스}</code> 또는 <code>{provide: &#39;이름&#39;, useValue: &#39;값&#39;}</code>형태로 주입<blockquote>
+<p>ex) <code>{ provide: &#39;mail&#39;, useClass: MailService }</code><br>ex) <code>{ provide: &#39;name&#39;,  useValue: &#39;robert kim&#39; }</code></p>
+</blockquote>
+</li>
+<li>사용할 <code>Component</code>의 <code>constructor</code>에 <code>@Inject</code> 데코레이터와 함께 사용<blockquote>
+<p>ex) <code>constructor(@Inject(&#39;mail&#39;) private mail, @Inject(&#39;name&#39;) private name)</code></p>
+</blockquote>
+</li>
+</ol>
+<h2 id="7-Loop-Through-Angular-2-Components-with-ngFor"><a href="#7-Loop-Through-Angular-2-Components-with-ngFor" class="headerlink" title="7. Loop Through Angular 2 Components with ngFor"></a>7. Loop Through Angular 2 Components with ngFor</h2><p><code>ngFor</code> 를 사용 해 본다.</p>
+<ol>
+<li>HTML에서 <code>*ngFor=&quot;let {변수} of {참조}&quot;</code> 형태로 사용</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> *<span class="attr">ngFor</span>=<span class="string">"let message of mail.messages"</span>&gt;</span></div><div class="line">    &#123;&#123; message &#125;&#125;</div><div class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Angular Compiler는 HTML을 컴파일 하면서 <code>*</code>가 있는 부분은 다시 재생성 하는걸로 보인다.</p>
+<h2 id="8-Pass-Values-into-Angular-2-Components-with-Input"><a href="#8-Pass-Values-into-Angular-2-Components-with-Input" class="headerlink" title="8. Pass Values into Angular 2 Components with @Input"></a>8. Pass Values into Angular 2 Components with @Input</h2><p><code>Component</code> 값을 주입하기 위해서는 <code>attribute</code> 형태로 주입하며, <code>@Input</code>을 이용해야 한다.</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Component, OnInit, Input &#125; <span class="keyword">from</span> <span class="string">'@angular/core'</span>;</div><div class="line"></div><div class="line"><span class="meta">@Component</span>(&#123;</div><div class="line">  selector: <span class="string">`di-test`</span>,</div><div class="line">  template: <span class="string">`&#123;&#123; diMessage &#125;&#125;`</span></div><div class="line">&#125;)</div><div class="line"><span class="keyword">class</span> DITestComponent <span class="keyword">implements</span> OnInit &#123;</div><div class="line">  <span class="meta">@Input</span>() diMessage;</div><div class="line"></div><div class="line">  <span class="keyword">constructor</span>(<span class="params"></span>) &#123;&#125;</div><div class="line">  ngOnInit() &#123;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>line 1</strong>: <code>Input</code> decorator는 <code>@angular/core</code>를 사용한다.</li>
+<li><strong>line 5</strong>: <code>diMessage</code>를 interpolation 했다는건, 해당 class의 member 변수라는 의미 일 것이다.</li>
+<li><strong>line 8</strong>: <code>diMessage</code>에 <code>@Input</code> decorator 를 붙이므로, <code>Attribute</code>를 통해 값을 받을 수 있다.</li>
+</ul>
+<p>위의 <code>DITestComponent</code>는 아래와 같이 사용하면 된다.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">`<span class="tag">&lt;<span class="name">di-test</span> [<span class="attr">message</span>]=<span class="string">"some message"</span>&gt;</span><span class="tag">&lt;/<span class="name">di-test</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="9-Sync-Values-from-Inputs-with-Angular-2’s-ngModel-Two-Way-Binding"><a href="#9-Sync-Values-from-Inputs-with-Angular-2’s-ngModel-Two-Way-Binding" class="headerlink" title="9. Sync Values from Inputs with Angular 2’s ngModel Two-Way Binding"></a>9. Sync Values from Inputs with Angular 2’s ngModel Two-Way Binding</h2><p><strong>2-way Binding</strong>에 대해 알아본다.</p>
+<p>사용법은 <code>HTML</code>에 <code>[(ngModel)]=variable</code> 형태로 <code>ngModel</code> keyword를 통해 변수와 바인딩 한다.</p>
+<blockquote>
+<p><code>app.module.ts</code>에 <code>FormsModule</code>를 imports 해야 한다.</p>
+</blockquote>
+<h2 id="10-Pass-Events-from-Angular-2-Components-with-Output"><a href="#10-Pass-Events-from-Angular-2-Components-with-Output" class="headerlink" title="10. Pass Events from Angular 2 Components with @Output"></a>10. Pass Events from Angular 2 Components with @Output</h2>
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="http://khackskjs.github.io/2017/11/28/Angular-egghead-01/" data-id="cjaqwd6d3000mq59ox9mypsra" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://khackskjs.github.io/2017/11/28/Angular-egghead-01/" data-id="cjbz31iwd000qkg9o48xt25uj" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -308,6 +355,16 @@ ga('send', 'pageview');
         
 <nav id="article-nav">
     
+        <a href="/2018/01/03/English-Youtube-LiveAcademy-Could-Would/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">més nou</strong>
+        <p class="article-nav-title">
+        
+            Could Would 사용하기
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
     
         <a href="/2017/11/26/normalize-example/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">antic</strong>
@@ -326,6 +383,15 @@ ga('send', 'pageview');
         <h3 class="widget-title">recents</h3>
         <div class="widget">
             <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/01/03/English-Youtube-LiveAcademy-Could-Would/" class="title">Could Would 사용하기</a></p>
+                            <p class="item-date"><time datetime="2018-01-03T13:10:59.000Z" itemprop="datePublished">2018-01-03</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -363,15 +429,6 @@ ga('send', 'pageview');
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2017/08/19/Angular-Routing/" class="title">Angular Routing</a></p>
-                            <p class="item-date"><time datetime="2017-08-19T08:34:18.000Z" itemprop="datePublished">2017-08-19</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -391,7 +448,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">arxius</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">4</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">4</span></li></ul>
         </div>
     </div>
 
@@ -401,7 +458,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">etiquetes</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ASUS/">ASUS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Angular/">Angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Environment/">Environment</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Follow-me/">Follow me</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NAS/">NAS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RT-N56U/">RT-N56U</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Routing/">Routing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/">angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/babel/">babel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/babel-node/">babel-node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/egghead/">egghead</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ext3/">ext3</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ground-rule/">ground rule</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/normalizr/">normalizr</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tip/">tip</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ASUS/">ASUS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Angular/">Angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/">English</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Environment/">Environment</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Follow-me/">Follow me</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NAS/">NAS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RT-N56U/">RT-N56U</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Routing/">Routing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/">angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/babel/">babel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/babel-node/">babel-node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/egghead/">egghead</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ext3/">ext3</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ground-rule/">ground rule</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/normalizr/">normalizr</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tip/">tip</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -411,7 +468,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">etiqueta cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/ASUS/" style="font-size: 10px;">ASUS</a> <a href="/tags/Angular/" style="font-size: 10px;">Angular</a> <a href="/tags/Environment/" style="font-size: 10px;">Environment</a> <a href="/tags/Follow-me/" style="font-size: 10px;">Follow me</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/NAS/" style="font-size: 10px;">NAS</a> <a href="/tags/RT-N56U/" style="font-size: 10px;">RT-N56U</a> <a href="/tags/Routing/" style="font-size: 10px;">Routing</a> <a href="/tags/angular/" style="font-size: 10px;">angular</a> <a href="/tags/babel/" style="font-size: 10px;">babel</a> <a href="/tags/babel-node/" style="font-size: 10px;">babel-node</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/egghead/" style="font-size: 10px;">egghead</a> <a href="/tags/ext3/" style="font-size: 10px;">ext3</a> <a href="/tags/ground-rule/" style="font-size: 10px;">ground rule</a> <a href="/tags/normalizr/" style="font-size: 10px;">normalizr</a> <a href="/tags/tip/" style="font-size: 10px;">tip</a>
+            <a href="/tags/ASUS/" style="font-size: 10px;">ASUS</a> <a href="/tags/Angular/" style="font-size: 10px;">Angular</a> <a href="/tags/English/" style="font-size: 10px;">English</a> <a href="/tags/Environment/" style="font-size: 10px;">Environment</a> <a href="/tags/Follow-me/" style="font-size: 10px;">Follow me</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/NAS/" style="font-size: 10px;">NAS</a> <a href="/tags/RT-N56U/" style="font-size: 10px;">RT-N56U</a> <a href="/tags/Routing/" style="font-size: 10px;">Routing</a> <a href="/tags/angular/" style="font-size: 10px;">angular</a> <a href="/tags/babel/" style="font-size: 10px;">babel</a> <a href="/tags/babel-node/" style="font-size: 10px;">babel-node</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/egghead/" style="font-size: 10px;">egghead</a> <a href="/tags/ext3/" style="font-size: 10px;">ext3</a> <a href="/tags/ground-rule/" style="font-size: 10px;">ground rule</a> <a href="/tags/normalizr/" style="font-size: 10px;">normalizr</a> <a href="/tags/tip/" style="font-size: 10px;">tip</a>
         </div>
     </div>
 
@@ -447,7 +504,7 @@ ga('send', 'pageview');
                 <h1 class="logo-wrap">
                     <a href="/" class="logo"></a>
                 </h1>
-                <p>&copy; 2017 Robert Kim</p>
+                <p>&copy; 2018 Robert Kim</p>
                 <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
             </div>
         </div>
