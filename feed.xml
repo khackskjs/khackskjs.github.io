@@ -5,7 +5,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://khackskjs.github.io/"/>
-  <updated>2018-01-06T16:14:57.000Z</updated>
+  <updated>2018-01-08T14:12:56.000Z</updated>
   <id>http://khackskjs.github.io/</id>
   
   <author>
@@ -14,6 +14,83 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>&#39;찾다&#39; 3가지 표현법 (Find, Look for, Search)</title>
+    <link href="http://khackskjs.github.io/2018/01/08/English-Youtube-LiveAcademy-Find-Look-for-Search/"/>
+    <id>http://khackskjs.github.io/2018/01/08/English-Youtube-LiveAcademy-Find-Look-for-Search/</id>
+    <published>2018-01-08T13:43:41.000Z</published>
+    <updated>2018-01-08T14:12:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="찾다-Find-Look-for-Search"><a href="#찾다-Find-Look-for-Search" class="headerlink" title="찾다 - Find, Look for, Search"></a>찾다 - Find, Look for, Search</h1><p>Youtube의 <a href="https://www.youtube.com/watch?v=uXPxXG5NUYo" target="_blank" rel="external">‘찾다’의 3가지 모습 - find | look for | search</a>를 기억하기 위해 정리한 내용입니다.</p>
+<h2 id="Sumary"><a href="#Sumary" class="headerlink" title="Sumary"></a>Sumary</h2><p>한문장에 끝내기:<br>I’ve been looking for them for 2 hours. I can’t find them. I searched Every where</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">의미</th>
+<th style="text-align:center">example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Find</td>
+<td style="text-align:center">찾는 순간(일시적)</td>
+<td style="text-align:center">I found my keys.</td>
+</tr>
+<tr>
+<td style="text-align:center">Look for</td>
+<td style="text-align:center">과정</td>
+<td style="text-align:center">I’m looking for my note.</td>
+</tr>
+<tr>
+<td style="text-align:center">Search</td>
+<td style="text-align:center">(지역/공간) 뒤지다</td>
+<td style="text-align:center">I searched everywhere</td>
+</tr>
+</tbody>
+</table>
+<p>| Usage  | I’ll ask her when I see her | I’m going to give a presentation in class |</p>
+<h2 id="Find"><a href="#Find" class="headerlink" title="Find"></a>Find</h2><p>발견하는 그 순간</p>
+<ul>
+<li>I found my keys.</li>
+<li>I found my cellphone.</li>
+</ul>
+<h2 id="Look-for"><a href="#Look-for" class="headerlink" title="Look for"></a>Look for</h2><p>찾는 과정</p>
+<ul>
+<li>I’m looking for my keys.</li>
+<li>I’m looking for a good restaurant in this area.</li>
+<li>I’m looking for a something to do this weekend.</li>
+<li>Are you looking for something?</li>
+<li>what are you looking for?</li>
+</ul>
+<h2 id="Search"><a href="#Search" class="headerlink" title="Search"></a>Search</h2><p>(공간,장소 등을) 뒤지다/수색하다.</p>
+<ul>
+<li>I searched everywhere and I still can’t find my keys.</li>
+<li>A. Did you search your room?</li>
+<li>B. Yeah, I searched my room, I searched my pockets, I searched my coat pockets.</li>
+<li>I’ve been looking for them for 2 hours. I can’t find them. I searched Every where</li>
+<li>I searched the internet and I found some information about the brand.</li>
+</ul>
+<h3 id="Search-for"><a href="#Search-for" class="headerlink" title="Search for"></a>Search for</h3><ul>
+<li>I searched for some information online</li>
+<li>I searched for some information on the internet</li>
+<li>I serached to find some information</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;찾다-Find-Look-for-Search&quot;&gt;&lt;a href=&quot;#찾다-Find-Look-for-Search&quot; class=&quot;headerlink&quot; title=&quot;찾다 - Find, Look for, Search&quot;&gt;&lt;/a&gt;찾다 - Find, Lo
+    
+    </summary>
+    
+    
+      <category term="English" scheme="http://khackskjs.github.io/tags/English/"/>
+    
+      <category term="LiveAcademy" scheme="http://khackskjs.github.io/tags/LiveAcademy/"/>
+    
+  </entry>
   
   <entry>
     <title>English Youbute LiveAcademy Will vs Be going to</title>
@@ -180,7 +257,7 @@
     <link href="http://khackskjs.github.io/2017/11/28/Angular-egghead-01/"/>
     <id>http://khackskjs.github.io/2017/11/28/Angular-egghead-01/</id>
     <published>2017-11-27T15:18:40.000Z</published>
-    <updated>2018-01-06T11:37:36.000Z</updated>
+    <updated>2018-01-07T10:37:44.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Egg-Head-Angular-Get-Started"><a href="#Egg-Head-Angular-Get-Started" class="headerlink" title="[Egg Head] Angular Get Started"></a>[Egg Head] Angular Get Started</h1><p><a href="https://egghead.io" target="_blank" rel="external">Egg Head</a>의 <strong>Get Started with Angular</strong>를 강의 순서대로 <strong>남겨 둘만한 부분</strong>에 대해서 간단히 정리 해 본다.</p>
 <h2 id="2-Create-a-Simple-Angular-2-Component"><a href="#2-Create-a-Simple-Angular-2-Component" class="headerlink" title="2. Create a Simple Angular 2 Component"></a>2. Create a Simple Angular 2 Component</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ ng generate component simple-form --inline-template --inline-style</div><div class="line"><span class="comment"># same as</span></div><div class="line">$ ng g c simple-form -it -is</div></pre></td></tr></table></figure>
@@ -210,7 +287,7 @@
 </blockquote>
 </li>
 </ol>
-<h2 id="6-Provide-and-Share-Values-with-Angular-2-Dependency-Injection"><a href="#6-Provide-and-Share-Values-with-Angular-2-Dependency-Injection" class="headerlink" title="6. Provide and Share Values with Angular 2 Dependency Injection"></a>6. Provide and Share Values with Angular 2 Dependency Injection</h2><p><code>providers</code>에 <code>object</code>를 통해 이름을 변경해서 <code>DI</code> 해 본다.</p>
+<h2 id="6-Provide-and-Share-Values-with-Angular-2-Dependency-Injection"><a href="#6-Provide-and-Share-Values-with-Angular-2-Dependency-Injection" class="headerlink" title="6. Provide and Share Values with Angular 2 Dependency Injection"></a>6. Provide and Share Values with Angular 2 Dependency Injection</h2><p><code>providers</code>에 <code>object</code>를 통해 이름을 변경해서 <code>DI</code> 해 본다.<br><strong>사용하는 곳에서 <code>import {} from</code>을 하지 않아도 된다.</strong></p>
 <ol>
 <li><code>app.module.ts</code>의 providers에 <code>{provide: &#39;이름&#39;, useClass: 서비스_클래스}</code> 또는 <code>{provide: &#39;이름&#39;, useValue: &#39;값&#39;}</code>형태로 주입<blockquote>
 <p>ex) <code>{ provide: &#39;mail&#39;, useClass: MailService }</code><br>ex) <code>{ provide: &#39;name&#39;,  useValue: &#39;robert kim&#39; }</code></p>
@@ -241,7 +318,22 @@
 <blockquote>
 <p><code>app.module.ts</code>에 <code>FormsModule</code>을 imports 해야 한다.</p>
 </blockquote>
-<h2 id="10-Pass-Events-from-Angular-2-Components-with-Output"><a href="#10-Pass-Events-from-Angular-2-Components-with-Output" class="headerlink" title="10. Pass Events from Angular 2 Components with @Output"></a>10. Pass Events from Angular 2 Components with @Output</h2>]]></content>
+<h2 id="10-Pass-Events-from-Angular-2-Components-with-Output"><a href="#10-Pass-Events-from-Angular-2-Components-with-Output" class="headerlink" title="10. Pass Events from Angular 2 Components with @Output"></a>10. Pass Events from Angular 2 Components with @Output</h2><p>Output 을 통해 event를 발생 시켜본다.<br><code>import { Output, EventEmitter } from &#39;@angular/core&#39;;</code></p>
+<figure class="highlight ts"><figcaption><span>someComponent.ts</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Component, OnInit, Input, Output, EventEmitter &#125; <span class="keyword">from</span> <span class="string">'@angular/core'</span>;</div><div class="line"></div><div class="line"><span class="meta">@Component</span>(&#123;</div><div class="line">  selector: <span class="string">'some-component'</span>,</div><div class="line">  template: <span class="string">`</span></div><div class="line">    &lt;input [(ngModel)]="message"&gt;</div><div class="line">    &lt;button (click)="updateMsg.emit(&#123;text: message.text&#125;)"&gt;Emit Msg&lt;/button&gt;</div><div class="line">  `</div><div class="line">&#125;)</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> SomeComponent <span class="keyword">implements</span> OnInit &#123;</div><div class="line">  <span class="meta">@Input</span>() message;</div><div class="line">  <span class="meta">@Output</span>() updateMsg = <span class="keyword">new</span> EventEmitter();</div><div class="line"></div><div class="line">  <span class="keyword">constructor</span>(<span class="params"></span>) &#123;&#125;</div><div class="line">  ngOnInit() &#123;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>line 1</strong>: <code>Output</code>, <code>EventEmitter</code> decorator는 <code>@angular/core</code>를 사용한다.</li>
+<li><strong>line 7</strong>: button click시 <code>eventEmitter.emit</code> method를 호출한다.</li>
+</ul>
+<p>이벤트를 수신 받을 때는 다음과 같이 사용한다.</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Component</span>(&#123;</div><div class="line">  selector: <span class="string">'main-component'</span>,</div><div class="line">  template: <span class="string">`&lt;some-component (updateMsg)=updateMsgFunc(text)&gt;&lt;/some-component&gt;`</span></div><div class="line">&#125;)</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> MainComponent &#123;</div><div class="line">  updateMsgFunc(text) &#123;</div><div class="line">    <span class="comment">// Method stuff</span></div><div class="line">  &#125;</div><div class="line">  <span class="keyword">constructor</span>(<span class="params"></span>) &#123;&#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// ts</span></div></pre></td></tr></table></figure>
+<p><code>@Output</code>은 사용하는곳의 Event binding 이름이다.</p>
+<blockquote>
+<p><code>@Output() updateMsg = new EventEmitter();</code> 하게되면, 사용하는곳에서는 <code>&lt;using-comp (updateMsg)=&quot;someFunc&quot;&gt;</code> 형태로 사용 함</p>
+</blockquote>
+<h2 id="11-Write-CSS-inside-of-Angular-2-Components"><a href="#11-Write-CSS-inside-of-Angular-2-Components" class="headerlink" title="11. Write CSS inside of Angular 2 Components"></a>11. Write CSS inside of Angular 2 Components</h2><p>해당 Component 에서만 유효하다.</p>
+<figure class="highlight ts"><figcaption><span>some.component.ts</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Component</span>(&#123;</div><div class="line">  selector: <span class="string">'some-component'</span>,</div><div class="line">  styles: [<span class="string">`</span></div><div class="line">    * &#123;</div><div class="line">      font-family: monospace;</div><div class="line">    &#125;</div><div class="line">  `]</div><div class="line">&#125;)</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> SomeComponent &#123;&#125;</div></pre></td></tr></table></figure>
+<p>Component 전체에 대한 스타일은 사용하는 곳에서, 사용하려는 Component Selector 를 Tag로 스타일을 적용하면 된다.</p>
+<figure class="highlight ts"><figcaption><span>main.component.ts</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Component</span>(&#123;</div><div class="line">  styles: [<span class="string">`</span></div><div class="line">    some-component &#123;</div><div class="line">      margin-top: 10px;</div><div class="line">    &#125;</div><div class="line">  `]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -625,84 +717,6 @@
     
     
       <category term="tip" scheme="http://khackskjs.github.io/tags/tip/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>블로그 시작 환경 설정 (Hexo, github pages)</title>
-    <link href="http://khackskjs.github.io/2017/06/22/Setting-Hexo-github-pages/"/>
-    <id>http://khackskjs.github.io/2017/06/22/Setting-Hexo-github-pages/</id>
-    <published>2017-06-21T15:05:33.000Z</published>
-    <updated>2017-07-28T16:34:36.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>순서는 크게 아래 3단계</p>
-<ol>
-<li>hexo 설치 및 정적 페이지 생성</li>
-<li>github repository &amp; Disqus ID 생성</li>
-<li>github 연동 및 Disqus 설정 후 배포</li>
-</ol>
-<blockquote>
-<p><strong>Let’s just Follow me.</strong></p>
-</blockquote>
-<p><code>npm</code>이 설치 되어 있지 않으면 <a href="https://nodejs.org/en/download/" target="_blank" rel="external">node.js</a>를 설치하면 <code>npm</code>이 설치된다.</p>
-<h2 id="1-hexo-설치-및-정적-페이지-생성"><a href="#1-hexo-설치-및-정적-페이지-생성" class="headerlink" title="1. hexo 설치 및 정적 페이지 생성"></a>1. hexo 설치 및 정적 페이지 생성</h2><h3 id="설치"><a href="#설치" class="headerlink" title="설치"></a>설치</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; npm install -g hexo-cli</div></pre></td></tr></table></figure>
-<h3 id="hexo-프로젝트-생성-및-dependency-download"><a href="#hexo-프로젝트-생성-및-dependency-download" class="headerlink" title="hexo 프로젝트 생성 및 dependency download"></a>hexo 프로젝트 생성 및 dependency download</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; hexo init <span class="string">"sVeloperBlog"</span></div><div class="line">&gt; <span class="built_in">cd</span> sVeloperBlog</div><div class="line">&gt; npm install</div></pre></td></tr></table></figure>
-<h3 id="포스트-파일-생성"><a href="#포스트-파일-생성" class="headerlink" title="포스트 파일 생성"></a>포스트 파일 생성</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; hexo new <span class="string">"first post"</span></div><div class="line"><span class="comment"># or</span></div><div class="line">&gt; hexo n <span class="string">"first post"</span></div></pre></td></tr></table></figure>
-<p><code>/source/_post/first-post.md</code> 가 생성됨</p>
-<h3 id="예제-포스트"><a href="#예제-포스트" class="headerlink" title="예제 포스트"></a>예제 포스트</h3><figure class="highlight md"><figcaption><span>first-post.md</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="section"># First post</span></div><div class="line"></div><div class="line">It's my first post!</div><div class="line"></div><div class="line"><span class="section">## Introduce myself</span></div><div class="line"></div><div class="line">Hello I'm Robert Kim.</div><div class="line"></div><div class="line"><span class="section">## more..</span></div><div class="line"></div><div class="line">My Hobby List</div><div class="line"></div><div class="line"><span class="bullet">- </span>swimming</div><div class="line"><span class="bullet">- </span>cycling</div><div class="line"><span class="bullet">- </span>watching movie</div><div class="line"><span class="bullet">- </span>etc.</div></pre></td></tr></table></figure>
-<h3 id="포스트-확인"><a href="#포스트-확인" class="headerlink" title="포스트 확인"></a>포스트 확인</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; hexo server</div><div class="line"><span class="comment"># or</span></div><div class="line">&gt; hexo s</div></pre></td></tr></table></figure>
-<p>일반적으로 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 으로 확인 가능하며, command line output 으로 주소 확인 가능.</p>
-<h3 id="정적-페이지-생성"><a href="#정적-페이지-생성" class="headerlink" title="정적 페이지 생성"></a>정적 페이지 생성</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; hexo generate</div><div class="line"><span class="comment"># or</span></div><div class="line">&gt; hexo g</div></pre></td></tr></table></figure>
-<p><code>/blog/public/</code>에 실제 호스팅에 사용할 웹 페이지가 생성된다.</p>
-<blockquote>
-<p><strong>Notice</strong><br>정적 페이지에 변경이 제대로 반영되지 않을 경우 <code>hexo clean</code> 후 <code>hexo generate</code></p>
-</blockquote>
-<h2 id="2-github-repository-amp-Disqus-ID-생성"><a href="#2-github-repository-amp-Disqus-ID-생성" class="headerlink" title="2. github repository &amp; Disqus ID 생성"></a>2. github repository &amp; Disqus ID 생성</h2><h3 id="github-repository"><a href="#github-repository" class="headerlink" title="github repository"></a>github repository</h3><p><a href="https://github.com/" target="_blank" rel="external">github</a>로 이동 후 가입 &amp; 로그인 한다.</p>
-<p>우상단의 <code>New repository</code>를 선택한다.</p>
-<p><img src="githubNewRepository01.png" alt=""></p>
-<p><code>Repository name</code>에 본인의 {<code>github ID</code>}.github.io 로 입력한 후 <code>Create repository</code>선택.<br><em>(이미 이 블로그가 <code>khackskjs.github.io</code>를 사용하고 있어서 already exists)</em></p>
-<p><img src="githubNewRepository02.png" alt=""></p>
-<h3 id="Disqus-ID-생성"><a href="#Disqus-ID-생성" class="headerlink" title="Disqus ID 생성"></a>Disqus ID 생성</h3><p>댓글용 <a href="https://disqus.com/profile/signup/" target="_blank" rel="external">Disqus</a>서비스를 사용하기 위해 사이트로 이동 후 가입하거나 지원하는 SNS 연동</p>
-<p><img src="disqus_01.png" alt=""><br>이름, 이메일(인증 필요)을 이용해서 가입한다.<br>이 블로그를 위해 khackskjs@gmail.com 계정은 이용중이므로, 다른 도메인 메일을 통해 이미지 캡쳐</p>
-<p><img src="disqus_02.png" alt=""><br>코멘트를 이용 할 것이므로 위의 <strong>I want to comment on sites</strong>를 선택한다.</p>
-<p><img src="disqus_03.png" alt=""><br>Disqus의 구독 서비스를 이용하라는거 같은데 그냥 스킵하고, 우상단의 유저 아이콘을 선택한다.</p>
-<p><img src="disqus_04.png" alt=""><br>계정설정 화면이 나오면 <code>Edit Profile</code>을 선택한다.</p>
-<p><img src="disqus_05.png" alt=""><br>계정설정 화면에서 <code>Acount</code>탭에서 <code>Username</code>을 설정한다.<br>disqus service를 통틀어 고유한 이름이어야 하며, 이를통해 hexo와 연동이 가능하다.<br>(<code>hexo</code> <code>_config.yml</code>에서 <code>disqus_shortname</code>에 사용)</p>
-<h2 id="3-github-연동-및-Disqus-설정-후-배포"><a href="#3-github-연동-및-Disqus-설정-후-배포" class="headerlink" title="3. github 연동 및 Disqus 설정 후 배포"></a>3. github 연동 및 Disqus 설정 후 배포</h2><p>git에 배포 해주는 플러긴을 설치한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; npm i hexo-deployer-git --save</div></pre></td></tr></table></figure>
-<p>GitHub 계정 및 <code>disqus_shortname</code> 을 입력한다.</p>
-<figure class="highlight yml"><figcaption><span>./_config.yml</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># URL</span></div><div class="line"><span class="attr">url:</span> <span class="attr">http://&#123;github_id&#125;.github.io/</span></div><div class="line"><span class="comment"># Deployment</span></div><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">  type:</span> <span class="string">git</span></div><div class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/&#123;github_id&#125;/&#123;github_id&#125;.github.io</span></div><div class="line"><span class="attr">  branch:</span> <span class="string">master</span></div><div class="line"><span class="comment"># for Disqus</span></div><div class="line"><span class="attr">disqus_shortname:</span> <span class="string">sveloper</span></div></pre></td></tr></table></figure>
-<p>이제 설정은 끝났고, 위에서 생성한 페이지 (<code>hexo g</code>)를 배포한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; hexo deploy</div><div class="line"><span class="comment"># or</span></div><div class="line">&gt; hexo d</div></pre></td></tr></table></figure>
-<p>github로 push가 되었을 것이다.<br><code>_config.yml</code>파일의 <code>url</code>에 입력한 주소(ex: <code>http://khackskjs.github.io/</code>)로 이동하면 블로그가 보일 것이다.<br><strong>(입력은 http, 호스팅은 https)</strong></p>
-<hr>
-<p>기본적인 사용은 위의 포스팅을 따르면 문제 없을 것이다.<br>(문제가 있다면 댓글 주시면 반영토록 하겠습니다)</p>
-<p>좀 더 고급진(?) 사용을 원한다면 아래 링크들을 참조 하길 바란다.</p>
-<a href="/2017/06/30/hexo-markdown-syntax/" title="hexo, markdown syntax">hexo, markdown syntax</a>
-<blockquote><footer><strong>Tag Plugins</strong><cite><a href="https://hexo.io/docs/tag-plugins.html" target="_blank" rel="external">hexo.io</a></cite></footer></blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;순서는 크게 아래 3단계&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;hexo 설치 및 정적 페이지 생성&lt;/li&gt;
-&lt;li&gt;github repository &amp;amp; Disqus ID 생성&lt;/li&gt;
-&lt;li&gt;github 연동 및 Disqus 설정 후 배포&lt;/li&gt;
-&lt;/o
-    
-    </summary>
-    
-      <category term="Blog" scheme="http://khackskjs.github.io/categories/Blog/"/>
-    
-      <category term="Hexo" scheme="http://khackskjs.github.io/categories/Blog/Hexo/"/>
-    
-    
-      <category term="Hexo" scheme="http://khackskjs.github.io/tags/Hexo/"/>
-    
-      <category term="Environment" scheme="http://khackskjs.github.io/tags/Environment/"/>
-    
-      <category term="Follow me" scheme="http://khackskjs.github.io/tags/Follow-me/"/>
     
   </entry>
   
